@@ -1,0 +1,800 @@
+% This LaTeX was auto-generated from MATLAB code.
+% To make changes, update the MATLAB code and export to LaTeX again.
+
+\documentclass{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{graphicx}
+\usepackage{color}
+\usepackage{listings}
+\usepackage{hyperref}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{epstopdf}
+\usepackage{matlab}
+
+\sloppy
+\epstopdfsetup{outdir=./}
+\graphicspath{ {./LAB1_images/} }
+
+\begin{document}
+
+\matlabtitle{Lab 1}
+
+\matlabheading{Desktop Tools and Development Environment}
+
+\matlabheadingtwo{1) Tutorials about the environment}
+
+\matlabheadingthree{1.3  Indicate what the command history is and list two ways to repeat the evaluation previously executed expression.}
+
+\vspace{1em}
+
+\begin{par}
+\begin{flushleft}
+To indicate which are the commands you've typed before: 
+\end{flushleft}
+\end{par}
+
+\begin{matlabcode}
+commandhistory
+\end{matlabcode}
+
+\begin{par}
+\begin{flushleft}
+Then if you want to repeat the evaluation of a previosuly executed expression we can use the up arrow in the command window and select the desired command, using the \textit{commandhistory} command and use the pop-up window or using the command history layout avaliable here: HOME \textgreater{} LAYOUT \textgreater{} COMMAND HISTORY.
+\end{flushleft}
+\end{par}
+
+\vspace{1em}
+
+\matlabheadingthree{1.4  Indicate what the current folder window is used for. How can be some visualization options changed?}
+
+\begin{par}
+\begin{flushleft}
+DUNNO BRO HAHAHA 
+\end{flushleft}
+\end{par}
+
+\begin{par}
+\begin{flushleft}
+Ens inventarem algu jajh
+\end{flushleft}
+\end{par}
+
+\begin{par}
+\begin{flushleft}
+TODO: canviar amb les nostrs paraules 
+\end{flushleft}
+\end{par}
+
+\matlabheading{Matrices}
+
+\matlabheadingtwo{2) Basic matrix operations, Matrix manipulation}
+
+\begin{par}
+\begin{flushleft}
+\textbf{2.1}
+\end{flushleft}
+\end{par}
+
+\begin{matlabcode}
+v1 = [12,23,54,8,6]
+\end{matlabcode}
+\begin{matlaboutput}
+v1 = 1x5    
+    12    23    54     8     6
+
+\end{matlaboutput}
+
+\begin{par}
+\begin{flushleft}
+\texttt{v1 = }\texttt{1×5}
+\end{flushleft}
+\end{par}
+
+\begin{par}
+\begin{flushleft}
+\texttt{    12    23    54     8     6}
+\end{flushleft}
+\end{par}
+
+\vspace{1em}
+
+\begin{par}
+\begin{flushleft}
+\textbf{2.2}
+\end{flushleft}
+\end{par}
+
+\begin{matlabcode}
+v2 = v1 + 10
+\end{matlabcode}
+\begin{matlaboutput}
+v2 = 1x5    
+    22    33    64    18    16
+
+\end{matlaboutput}
+
+\begin{par}
+\begin{flushleft}
+\texttt{v2 = }\texttt{1×5}
+\end{flushleft}
+\end{par}
+
+\begin{par}
+\begin{flushleft}
+\texttt{    22    33    64    18    16}
+\end{flushleft}
+\end{par}
+
+\vspace{1em}
+
+\begin{par}
+\begin{flushleft}
+\textbf{2.3}
+\end{flushleft}
+\end{par}
+
+\begin{matlabcode}
+plot(v2)   
+\end{matlabcode}
+\begin{center}
+\includegraphics[width=\maxwidth{56.196688409433015em}]{figure_0}
+\end{center}
+
+\begin{par}
+\begin{flushleft}
+\includegraphics[width=\maxwidth{56.196688409433015em}]{image_0}
+\end{flushleft}
+\end{par}
+
+\begin{par}
+\begin{flushleft}
+\textbf{2.4}
+\end{flushleft}
+\end{par}
+
+\begin{matlabcode}
+M = [1,4,22,7;
+    9,2,3,11;
+    49,55,6,3;
+    24,7,9,12]
+\end{matlabcode}
+\begin{matlaboutput}
+M = 4x4    
+     1     4    22     7
+     9     2     3    11
+    49    55     6     3
+    24     7     9    12
+
+\end{matlaboutput}
+
+\begin{par}
+\begin{flushleft}
+\texttt{M = }\texttt{4×4}
+\end{flushleft}
+\end{par}
+
+\begin{par}
+\begin{flushleft}
+\texttt{     1     4    22     7}
+\end{flushleft}
+\end{par}
+
+\begin{par}
+\begin{flushleft}
+\texttt{     9     2     3    11}
+\end{flushleft}
+\end{par}
+
+\begin{par}
+\begin{flushleft}
+\texttt{    49    55     6     3}
+\end{flushleft}
+\end{par}
+
+\begin{par}
+\begin{flushleft}
+\texttt{    24     7     9    12}
+\end{flushleft}
+\end{par}
+
+\vspace{1em}
+
+\vspace{1em}
+
+\begin{par}
+\begin{flushleft}
+\textbf{2.5}
+\end{flushleft}
+\end{par}
+
+\begin{matlabcode}
+Mt = M'
+\end{matlabcode}
+\begin{matlaboutput}
+Mt = 4x4    
+     1     9    49    24
+     4     2    55     7
+    22     3     6     9
+     7    11     3    12
+
+\end{matlaboutput}
+
+\begin{par}
+\begin{flushleft}
+\texttt{Mt = }\texttt{4×4}
+\end{flushleft}
+\end{par}
+
+\begin{par}
+\begin{flushleft}
+\texttt{     1     9    49    24}
+\end{flushleft}
+\end{par}
+
+\begin{par}
+\begin{flushleft}
+\texttt{     4     2    55     7}
+\end{flushleft}
+\end{par}
+
+\begin{par}
+\begin{flushleft}
+\texttt{    22     3     6     9}
+\end{flushleft}
+\end{par}
+
+\begin{par}
+\begin{flushleft}
+\texttt{     7    11     3    12}
+\end{flushleft}
+\end{par}
+
+\vspace{1em}
+
+\vspace{1em}
+
+\begin{par}
+\begin{flushleft}
+\textbf{2.6}
+\end{flushleft}
+\end{par}
+
+\begin{matlabcode}
+Mi = inv(M)
+\end{matlabcode}
+\begin{matlaboutput}
+Mi = 4x4    
+   -0.0223   -0.0755   -0.0063    0.0838
+    0.0150    0.0651    0.0242   -0.0744
+    0.0425   -0.0583   -0.0048    0.0298
+    0.0039    0.1567    0.0021   -0.0631
+
+\end{matlaboutput}
+\begin{matlabcode}
+ 
+\end{matlabcode}
+
+\begin{par}
+\begin{flushleft}
+\texttt{Mi = }\texttt{4×4}
+\end{flushleft}
+\end{par}
+
+\begin{par}
+\begin{flushleft}
+\texttt{   -0.0223   -0.0755   -0.0063    0.0838}
+\end{flushleft}
+\end{par}
+
+\begin{par}
+\begin{flushleft}
+\texttt{    0.0150    0.0651    0.0242   -0.0744}
+\end{flushleft}
+\end{par}
+
+\begin{par}
+\begin{flushleft}
+\texttt{    0.0425   -0.0583   -0.0048    0.0298}
+\end{flushleft}
+\end{par}
+
+\begin{par}
+\begin{flushleft}
+\texttt{    0.0039    0.1567    0.0021   -0.0631}
+\end{flushleft}
+\end{par}
+
+\vspace{1em}
+
+\vspace{1em}
+
+\begin{par}
+\begin{flushleft}
+\textbf{2.7}
+\end{flushleft}
+\end{par}
+
+\begin{matlabcode}
+M * Mi
+\end{matlabcode}
+\begin{matlaboutput}
+ans = 4x4    
+    1.0000         0    0.0000         0
+   -0.0000    1.0000   -0.0000         0
+    0.0000    0.0000    1.0000   -0.0000
+         0    0.0000    0.0000    1.0000
+
+\end{matlaboutput}
+
+\begin{par}
+\begin{flushleft}
+\texttt{\textbf{2.8}}
+\end{flushleft}
+\end{par}
+
+\begin{matlabcode}
+ans
+\end{matlabcode}
+\begin{matlaboutput}
+ans = 4x4    
+    1.0000         0    0.0000         0
+   -0.0000    1.0000   -0.0000         0
+    0.0000    0.0000    1.0000   -0.0000
+         0    0.0000    0.0000    1.0000
+
+\end{matlaboutput}
+
+\begin{par}
+\begin{flushleft}
+\texttt{ans = 4×4}
+\end{flushleft}
+\end{par}
+
+\begin{par}
+\begin{flushleft}
+\texttt{    1.0000         0    0.0000         0}
+\end{flushleft}
+\end{par}
+
+\begin{par}
+\begin{flushleft}
+\texttt{   -0.0000    1.0000   -0.0000         0}
+\end{flushleft}
+\end{par}
+
+\begin{par}
+\begin{flushleft}
+\texttt{    0.0000    0.0000    1.0000   -0.0000}
+\end{flushleft}
+\end{par}
+
+\begin{par}
+\begin{flushleft}
+\texttt{         0    0.0000    0.0000    1.0000}
+\end{flushleft}
+\end{par}
+
+\begin{par}
+\begin{flushleft}
+\texttt{\textbf{2.9}}
+\end{flushleft}
+\end{par}
+
+\begin{matlabcode}
+mesh(M)
+\end{matlabcode}
+\begin{center}
+\includegraphics[width=\maxwidth{56.196688409433015em}]{figure_1}
+\end{center}
+\begin{matlabcode}
+surf(M)
+\end{matlabcode}
+\begin{center}
+\includegraphics[width=\maxwidth{56.196688409433015em}]{figure_2}
+\end{center}
+
+\begin{par}
+\begin{flushleft}
+\includegraphics[width=\maxwidth{56.196688409433015em}]{image_1}
+\end{flushleft}
+\end{par}
+
+\begin{par}
+\begin{flushleft}
+\includegraphics[width=\maxwidth{56.196688409433015em}]{image_2}
+\end{flushleft}
+\end{par}
+
+\matlabheading{Graphics}
+
+\matlabheadingtwo{3) 2D Plots}
+
+\matlabheadingthree{\textbf{3.1) What does the "x = 0:0.05:5;" expression?}}
+
+\begin{par}
+\begin{flushleft}
+It creates the vector starting from 0 to 5 using a 0.05 strid
+\end{flushleft}
+\end{par}
+
+\begin{matlabcode}
+x = 0:0.05:5
+\end{matlabcode}
+\begin{matlaboutput}
+x = 1x101    
+         0    0.0500    0.1000    0.1500    0.2000    0.2500    0.3000    0.3500    0.4000    0.4500    0.5000    0.5500    0.6000    0.6500    0.7000    0.7500    0.8000    0.8500    0.9000    0.9500    1.0000    1.0500    1.1000    1.1500    1.2000    1.2500    1.3000    1.3500    1.4000    1.4500    1.5000    1.5500    1.6000    1.6500    1.7000    1.7500    1.8000    1.8500    1.9000    1.9500    2.0000    2.0500    2.1000    2.1500    2.2000    2.2500    2.3000    2.3500    2.4000    2.4500
+
+\end{matlaboutput}
+
+\begin{par}
+\begin{flushleft}
+\texttt{x = }\texttt{1×101}
+\end{flushleft}
+\end{par}
+
+\begin{par}
+\begin{flushleft}
+\texttt{         0    0.0500    0.1000    0.1500    0.2000    0.2500    0.3000    0.3500    0.4000    0.4500    0.5000    0.5500    0.6000    0.6500    0.7000    0.7500    0.8000    0.8500    0.9000    0.9500    1.0000    1.0500    1.1000    1.1500    1.2000    1.2500    1.3000    1.3500    1.4000    1.4500    1.5000    1.5500    1.6000    1.6500    1.7000    1.7500    1.8000    1.8500    1.9000    1.9500    2.0000    2.0500    2.1000    2.1500    2.2000    2.2500    2.3000    2.3500    2.4000    2.4500}
+\end{flushleft}
+\end{par}
+
+\matlabheadingthree{\texttt{3.2) What does the "bar" function?}}
+
+\begin{par}
+\hfill \break
+\end{par}
+
+\begin{matlabcode}
+help bar
+\end{matlabcode}
+\begin{matlaboutput}
+bar - Bar graph
+
+    This MATLAB function creates a bar graph with one bar for each element in y.
+
+    bar(y)
+    bar(x,y)
+    bar(___,width)
+    bar(___,style)
+    bar(___,color)
+    bar(___,Name,Value)
+    bar(ax,___)
+    b = bar(___)
+
+    See also bar3, bar3h, barh, histogram, hold, stairs, Bar Properties
+
+    Reference page for bar
+    Other functions named bar
+\end{matlaboutput}
+
+\begin{par}
+\begin{flushleft}
+This MATLAB function creates a bar graph with one bar for each element in y.
+\end{flushleft}
+\end{par}
+
+\matlabheadingthree{3.3) \texttt{What does the "stairs" function?}}
+
+\begin{par}
+\hfill \break
+\end{par}
+
+\begin{matlabcode}
+help stairs
+\end{matlabcode}
+\begin{matlaboutput}
+stairs - Stairstep graph
+
+    This MATLAB function draws a stairstep graph of the elements in Y.
+
+    stairs(Y)
+    stairs(X,Y)
+    stairs(___,LineSpec)
+    stairs(___,Name,Value)
+    stairs(ax,___)
+    h = stairs(___)
+    [xb,yb] = stairs(___)
+
+    See also LineSpec, bar, histogram, stem, Stair Properties
+
+    Reference page for stairs
+\end{matlaboutput}
+
+\begin{par}
+\begin{flushleft}
+\texttt{This MATLAB function draws a stairstep graph of the elements in Y.}
+\end{flushleft}
+\end{par}
+
+\matlabheadingtwo{\texttt{4) 3D Plots}}
+
+\matlabheadingthree{\texttt{4.1) Indicate and proof what does the "z = peaks(25)" expression.   }}
+
+\begin{par}
+\hfill \break
+\end{par}
+
+\begin{matlabcode}
+help peaks
+\end{matlabcode}
+\begin{matlaboutput}
+peaks - Example function of two variables
+
+    This MATLAB function returns a 49-by-49 matrix.
+
+    Z = peaks;
+    Z = peaks(n);
+    Z = peaks(V);
+    Z = peaks(X,Y);
+    peaks(...)
+    [X,Y,Z] = peaks(...);
+
+    See also meshgrid, surf
+
+    Reference page for peaks
+\end{matlaboutput}
+
+\begin{par}
+\begin{flushleft}
+\texttt{\textit{peaks}} is a function of two variables used as an example, obtained by translating and scaling Gaussian distributions. It is useful for demonstrating mesh, surf, pcolor, contour and so on.
+\end{flushleft}
+\end{par}
+
+\matlabheadingthree{4.2) Indicate the difference between \textit{mesh} and \textit{waterfall.}}
+
+\begin{par}
+\hfill \break
+\end{par}
+
+\begin{matlabcode}
+help waterfall
+\end{matlabcode}
+\begin{matlaboutput}
+waterfall - Waterfall plot
+
+    This MATLAB function creates a waterfall plot using x = 1:size(Z,2) and y =
+    1:size(Z,1).
+
+    waterfall(Z)
+    waterfall(X,Y,Z)
+    waterfall(...,C)
+    waterfall(ax,...)
+    h = waterfall(...)
+
+    See also axis, caxis, meshz, ribbon, surf
+
+    Reference page for waterfall
+\end{matlaboutput}
+\begin{matlabcode}
+waterfall(peaks(25))
+\end{matlabcode}
+\begin{center}
+\includegraphics[width=\maxwidth{56.196688409433015em}]{figure_3}
+\end{center}
+\begin{matlabcode}
+figure, mesh(peaks(25))
+\end{matlabcode}
+\begin{center}
+\includegraphics[width=\maxwidth{56.196688409433015em}]{figure_4}
+\end{center}
+
+\begin{par}
+\begin{flushleft}
+\textit{waterfall}:  This MATLAB function creates a waterfall plot using x = 1:size(Z,2) and y = 1:size(Z,1).
+\end{flushleft}
+\end{par}
+
+\begin{par}
+\begin{flushleft}
+\includegraphics[width=\maxwidth{56.196688409433015em}]{image_3}
+\end{flushleft}
+\end{par}
+
+\begin{par}
+\begin{flushleft}
+\includegraphics[width=\maxwidth{56.196688409433015em}]{image_4}
+\end{flushleft}
+\end{par}
+
+\begin{par}
+\begin{flushleft}
+The \texttt{waterfall} function draws a mesh but it does not generate lines from the Y-axis. This produces a “waterfall” effect. 
+\end{flushleft}
+\end{par}
+
+\matlabheadingthree{4.3) Indicate the difference between \textit{surf }and \textit{surfl.}}
+
+\begin{par}
+\hfill \break
+\end{par}
+
+\begin{matlabcode}
+help surf
+\end{matlabcode}
+\begin{matlaboutput}
+surf - Surface plot
+
+    This MATLAB function creates a three-dimensional surface plot.
+
+    surf(X,Y,Z)
+    surf(X,Y,Z,C)
+    surf(Z)
+    surf(Z,C)
+    surf(ax,___)
+    surf(___,Name,Value)
+    s = surf(___)
+
+    See also colormap, imagesc, mesh, meshgrid, pcolor, shading, view, 
+        Surface Properties
+
+    Reference page for surf
+\end{matlaboutput}
+\begin{matlabcode}
+help surfl
+\end{matlabcode}
+\begin{matlaboutput}
+surfl - Surface plot with colormap-based lighting
+
+    This MATLAB function and surfl(X,Y,Z) create three-dimensional shaded surfaces
+    using the default direction for the light source and the default lighting
+    coefficients for the shading model.
+
+    surfl(Z)
+    surfl(...,'light')
+    surfl(...,s)
+    surfl(X,Y,Z,s,k)
+    surfl(ax,...)
+    h = surfl(...)
+
+    See also colormap, light, shading
+
+    Reference page for surfl
+\end{matlaboutput}
+
+\begin{par}
+\begin{flushleft}
+\textit{surf }:   This MATLAB function creates a three-dimensional surface plot.
+\end{flushleft}
+\end{par}
+
+\begin{par}
+\begin{flushleft}
+\textit{surfl}:  This MATLAB function and surfl(X,Y,Z) create three-dimensional shaded surfaces using the default direction for the light source and the default lighting coefficients for the shading model.
+\end{flushleft}
+\end{par}
+
+\begin{matlabcode}
+surf(peaks(25))
+surfl(peaks(25))
+\end{matlabcode}
+\begin{center}
+\includegraphics[width=\maxwidth{56.196688409433015em}]{figure_5}
+\end{center}
+
+\begin{center}
+\includegraphics[width=\maxwidth{56.196688409433015em}]{figure_6}
+\end{center}
+
+\begin{par}
+\begin{flushleft}
+\includegraphics[width=\maxwidth{56.196688409433015em}]{image_5}\includegraphics[width=\maxwidth{56.196688409433015em}]{image_6}
+\end{flushleft}
+\end{par}
+
+\begin{par}
+\begin{flushleft}
+The main  difference is that the surfl plots a light model and the color depends on that light and surf plots the data and colors it depending on the z-axis. 
+\end{flushleft}
+\end{par}
+
+\matlabheadingthree{4.4) Observe the effects of \textit{countour, quiver} and \textit{slice}.}
+
+\begin{par}
+\hfill \break
+\end{par}
+
+\begin{matlabcode}
+help contour
+\end{matlabcode}
+\begin{matlaboutput}
+contour - Contour plot of matrix
+
+    This MATLAB function creates a contour plot containing the isolines of matrix Z,
+    where Z contains height values on the x-y plane.
+
+    contour(Z)
+    contour(X,Y,Z)
+    contour(___,levels)
+    contour(___,LineSpec)
+    contour(___,Name,Value)
+    contour(ax,___)
+    M = contour(___)
+    [M,c] = contour(___)
+
+    See also clabel, contour3, contourc, contourf, Contour Properties
+
+    Reference page for contour
+    Other functions named contour
+\end{matlaboutput}
+\begin{matlabcode}
+help quiver 
+\end{matlabcode}
+\begin{matlaboutput}
+quiver - Quiver or velocity plot
+
+    This MATLAB function plots vectors as arrows at the coordinates specified in
+    each corresponding pair of elements in x and y.
+
+    quiver(x,y,u,v)
+    quiver(u,v)
+    quiver(...,scale)
+    quiver(...,LineSpec)
+    quiver(...,LineSpec,'filled')
+    quiver(...,'PropertyName',PropertyValue,...)
+    quiver(ax,...)
+    h = quiver(...)
+
+    See also LineSpec, contour, plot, quiver3, Quiver Properties
+
+    Reference page for quiver
+\end{matlaboutput}
+\begin{matlabcode}
+help slice
+\end{matlabcode}
+\begin{matlaboutput}
+slice - Volume slice planes
+
+    This MATLAB function draws slices for the volumetric data V.
+
+    slice(X,Y,Z,V,xslice,yslice,zslice)
+    slice(V,xslice,yslice,zslice)
+    slice(___,method)
+    slice(ax,___)
+    s = slice(___)
+
+    See also contourslice, interp3, isosurface, meshgrid
+
+    Reference page for slice
+\end{matlaboutput}
+
+\begin{par}
+\begin{flushleft}
+ \textit{contour}: This MATLAB function creates a contour plot containing the isolines of matrix Z,  where Z contains height values on the x-y plane.
+\end{flushleft}
+\end{par}
+
+\begin{par}
+\begin{flushleft}
+\textit{quiver}: Quiver or velocity plot.
+\end{flushleft}
+\end{par}
+
+\begin{par}
+\begin{flushleft}
+\textit{slice}: This MATLAB function draws slices for the volumetric data V.
+\end{flushleft}
+\end{par}
+
+\begin{matlabcode}
+contour(peaks(25))
+\end{matlabcode}
+\begin{center}
+\includegraphics[width=\maxwidth{56.196688409433015em}]{figure_7}
+\end{center}
+\begin{matlabcode}
+[x, y] = peaks(25)
+quiver(1, 1, x, y)
+\end{matlabcode}
+\begin{matlaboutput}
+Error using quiver (line 44)
+U and V must be the same size.
+\end{matlaboutput}
+\begin{matlabcode}
+slice(peaks(25))
+\end{matlabcode}
+
+\end{document}
