@@ -12,6 +12,7 @@ Per quan estigui public:
 ```
 
 ### Introduction to Matlab: Matrices, Graphics and Programming: Overview of the environment possibilities. 
-[PDF deliverable](https://github.com/xmartin46/VC/blob/master/Sessi%C3%B31_Entrega.pdf)
+[First class](https://github.com/xmartin46/VC/blob/master/Sessi%C3%B31_Entrega.pdf)
+[PDF deliverable](https://github.com/xmartin46/VC/blob/master/S1/Lab1.pdf)
 
 ### 
