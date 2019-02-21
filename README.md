@@ -12,14 +12,6 @@ Per quan estigui public:
 ```
 
 ### Introduction to Matlab: Matrices, Graphics and Programming: Overview of the environment possibilities. 
+[PDF deliverable](https://github.com/xmartin46/VC/blob/master/Sessi%C3%B31_Entrega.pdf)
 
-**TODO**:
-
-- [ ] Change the definitions that are copied from Matlab HELP prompt
-- [ ] 5) Images and Matrices
-- [ ] Talk about what we have done individually
-- [ ] Programming 
-  - [ ] 1.Programming
-  - [ ] 2.Vectorization
-  - [ ] 3.Preallocation
-  - [ ] 5.Structures
+### 
