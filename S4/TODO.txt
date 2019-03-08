@@ -1,0 +1,7 @@
+Es demana (treballant amb la imatge rabbit.jpg):
+
+1- Filtrar la imatge amb el filtre laplacià ([0 1 0; 1 -4 1; 0 1 0]). Podeu usar 'imfilter'.
+
+Dissenyeu un algorisme PROPI per localitzar els pasos per zero del resultat del laplacià. Heu obtingut contorn fi i tancat? (Podeu millorar el resultat utilitzant també la imatge mòdul del gradient que veu obtenir a la última sessió).
+
+2- Apliqueu l'algorisme de Canny per a obtenir els contorns a partir de la imatge original. Useu la funció 'edge' i presenteu diferents resultats tunnejant els diferents paràmetres de la funció.
