@@ -12,14 +12,16 @@ Per quan estigui public:
 ```
 
 ### First class
-- [Introduction](https://github.com/xmartin46/VC/blob/master/Sessi%C3%B31_Entrega.pdf)
+- [Introduction](https://github.com/xmartin46/VC/blob/master/S1/Practica_0/Practica0.pdf)
 
 ### Introduction to Matlab: Matrices, Graphics and Programming: Overview of the environment possibilities. 
-- [PDF deliverable](https://github.com/xmartin46/VC/blob/master/S1/Lab1.pdf)
+- [PDF deliverable](https://github.com/xmartin46/VC/blob/master/S1/Sessio1.pdf)
 
 ### Second class
-- [Pixel operations](https://github.com/xmartin46/VC/blob/master/S2/Lab2.pdf)
+- [Pixel operations](https://github.com/xmartin46/VC/blob/master/S2/Sessio2.pdf)
 
 ### Third class
-- [Convolutions](https://github.com/xmartin46/VC/blob/master/S2/Lab3.pdf)
+- [Convolutions](https://github.com/xmartin46/VC/blob/master/S3/Sessio3.pdf)
 
+### Fourth class
+- [Detecció de contorns](https://github.com/xmartin46/VC/blob/master/S4/Sessio4.pdf)
