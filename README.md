@@ -12,10 +12,10 @@ Per quan estigui public:
 ```
 
 ### First class
-- [Introduction](https://github.com/xmartin46/VC/blob/master/S1/Practica_0/Practica0.pdf)
+- [Introduction](https://github.com/xmartin46/VC/blob/master/S1/Sessio1.pdf)
 
 ### Introduction to Matlab: Matrices, Graphics and Programming: Overview of the environment possibilities. 
-- [PDF deliverable](https://github.com/xmartin46/VC/blob/master/S1/Sessio1.pdf)
+- [PDF deliverable](https://github.com/xmartin46/VC/blob/master/S1/Practica_0/Practica0.pdf)
 
 ### Second class
 - [Pixel operations](https://github.com/xmartin46/VC/blob/master/S2/Sessio2.pdf)
