@@ -1,0 +1,98 @@
+\documentclass[12]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{cite}
+\usepackage{graphicx}
+\author{Xavier Martín Ballesteros and Adrià Cabeza}
+\title{Meat Quality Control \\ \large{Computer Vision, UPC}}
+
+\begin{document}
+\maketitle
+  \vspace{1cm}
+	\begin{abstract}
+	%TODO
+Our goal is to discuss about different binarization methods. We have used the \textit{basic binarization}, \textit{p-tile thresholding}, \textit{optimal thresholding}, \textit{kapur method}.
+\end{abstract}
+
+\newpage
+\tableofcontents
+%podem posar un \newpage aquí si volem 
+\section{Introduction}
+The objective of this assignment is to detect the percentage of fat in chops using images. To do it, we have used several different threshold techniques. Those methods consists in setting a constant value called \textit{threshold} ($T$) and separe the pixels depending its value ($ f(i,j)$):
+\vspace{-0.6cm}
+\begin{center}
+$$ g(i,j)=1\ if\ f(i,j) \geq T$$ 
+$$ g(i,j)=0\ if\ f(i,j) \leq T$$
+\end{center}
+
+In the following sections we will introduce different methods to find the threshold value and compared its results. 
+
+\section{Binarization}
+\subsection{Basic Binarization}
+This is the first method we tried and also the fastest and easiest one. 
+
+\noindent Our approach was to print the histogram of the picture and check where we could set the best value for the \textit{threshold} in order to separe the fat. The histograms that we got were bimodal so we coud set an acceptable value just by looking at it. We believe that this distribution of pixel values is formed because we are working with grayscale pictures of chops where we can appreciate clearly a lighter tone for the fat and darker tones for the rest.
+\subsection{P-tile Method}
+This method uses knowledge about the area size of the desired object. It assumes the desired part of the image are brighter that the background and occupy a fixed percentage of the picture area. The \textit{threshold} is defined as the grey level that mostly corresponds to mapping at least that fixed percentage into the object. 
+
+\subsection{Otsu Method}
+
+
+\subsection{Optimal thresholding Method}
+
+
+\subsection{Kapur, Sahoo and Wong Method}
+In this method two probability distributions are derived from the original gray level distribution of the image(i.e. object distribution and background distribution): 
+\vspace{-0.5cm}
+\begin{center}
+$$\frac{p_0}{P_t},\frac{p_1}{P_t},...,\frac{p_t}{P_t}$$
+\end{center} \begin{center}
+and
+$$\frac{p_{t+1}}{1-P_t},\frac{p_{t+2}}{1-P_t},...,\frac{p_{l-1}}{1-P_t}$$
+\end{center}
+\vspace{0.4cm}
+
+where \textit{t} is the value of the threshold and $P_t = \sum_{i=0}^{t}{p_i}$. Define
+
+$$H_b(t) = - \sum_{i = 0}^{t} \frac{p_i}{P_t}log_e\left(\frac{p_i}{P_t}\right)$$
+$$ H_b(t) = - \sum_{i = t+1}^{l-1} \frac{p_i}{1-p_i}log_e\left(\frac{p_i}{1-P_t}\right)$$
+
+Then the optimal threshold $t^{*}$ is defined as the grey level which maximizes $H_b(t)+H_w(t)$, that is, 
+\vspace{-0.5cm}
+\begin{center}
+$$t^{*}=\ ArgMax\left(H_b(t) + H_w(t)\right)$$
+\end{center}
+\section{Results}
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|l|l|l|l|}
+\hline
+& bla & bli & blu \\  \hline
+\textbf{Otsu} &  &  &  \\ \hline
+ \textbf{Kapur} & & &  \\  \hline
+ \textbf{Optimal Thresholding} & & &  \\ \hline
+  \textbf{P-tile} & & & \\ \hline
+\end{tabular}
+\caption{Results obtained using different methods of binarization}
+\label{Results}
+\end{table}
+
+\begin{thebibliography}{100}
+
+\bibitem{A Comparison of Thresholding Methods - NTNU}
+C. Henden (2004). \textit{ Exercise in Computer Vision. A Comparison of Thresholding Methods.} [online] NTNU. Available at: http://www.pvv.org/~perchrh/papers/datasyn/paper2/report.pdf [Accessed 14 Mar. 2019].
+
+
+\bibitem{Analysis of image Thresholding Methods for application to augmented reality enviornments}
+D. Martín Carabias (2012). \textit{Analysis of image Thresholding Methods for application to augmented reality enviornments.} [online] UCM. Available at: https://eprints.ucm.es/16932/1/Tesis\_Master\_Daniel\_Martin\_Carabias.pdf [Accessed 14 Mar. 2019].
+
+
+\bibitem{A survey of Thresholding Techniques}
+P. K. Sahoo, S. Soltani, K.C. Wong and Y.C. Chen (1988). \textit{A survey of Thresholding Techniques}. University of Waterloo, Waterloo, Canada  [Accessed 16 Mar. 2019].
+
+%TODO ficar els apunts del profe a bibliografia 
+\end{thebibliography}
+
+
+
+\end{document}

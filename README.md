@@ -24,4 +24,9 @@ Per quan estigui public:
 - [Convolutions](https://github.com/xmartin46/VC/blob/master/S3/Sessio3.pdf)
 
 ### Fourth class
-- [Detecció de contorns](https://github.com/xmartin46/VC/blob/master/S4/Sessio4.pdf)
+- [Edge detection](https://github.com/xmartin46/VC/blob/master/S4/Sessio4.pdf)
+
+### Fifth class
+
+- [Segmentation using Region Growing and K-means](https://github.com/xmartin46/VC/blob/master/S5/Sessio5.pdf)
+
