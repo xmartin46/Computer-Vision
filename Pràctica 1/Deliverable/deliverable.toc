@@ -3,6 +3,6 @@
 \contentsline {subsection}{\numberline {2.1}Basic Binarization}{2}
 \contentsline {subsection}{\numberline {2.2}P-tile Method}{2}
 \contentsline {subsection}{\numberline {2.3}Otsu Method}{3}
-\contentsline {subsection}{\numberline {2.4}Optimal thresholding Method}{3}
-\contentsline {subsection}{\numberline {2.5}Kapur, Sahoo and Wong Method}{3}
-\contentsline {section}{\numberline {3}Results}{3}
+\contentsline {subsection}{\numberline {2.4}Optimal thresholding by Clustering Method}{3}
+\contentsline {subsection}{\numberline {2.5}Kapur, Sahoo and Wong Method}{4}
+\contentsline {section}{\numberline {3}Results}{4}

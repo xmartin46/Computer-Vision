@@ -2,7 +2,8 @@
 \usepackage[utf8]{inputenc}
 \usepackage{cite}
 \usepackage{graphicx}
-\author{Xavier Martín Ballesteros and Adrià Cabeza}
+\usepackage{amssymb}
+\author{Xavier Martín Ballesteros and Adrià Cabeza Sant'Anna}
 \title{Meat Quality Control \\ \large{Computer Vision, UPC}}
 
 \begin{document}
@@ -35,10 +36,54 @@ This is the first method we tried and also the fastest and easiest one.
 This method uses knowledge about the area size of the desired object. It assumes the desired part of the image are brighter that the background and occupy a fixed percentage of the picture area. The \textit{threshold} is defined as the grey level that mostly corresponds to mapping at least that fixed percentage into the object. 
 
 \subsection{Otsu Method}
+Otsu method is one of the most successful methods for image thresholding. It is very effective for images which are bimodal. However, it may not be accurate for non-bimodal images. In this method we search among all possible thresholds to find the one that minimizes the weighted within-class variance, which is the same than maximizing inter-class variance.
 
+The probability of a pixel to have the gray level \textit{i} is
+\vspace{-0.5cm}
+\begin{center}
+$$ p_i = \frac{n_i}{N}, \hspace{1cm} p_i \geqslant 0, \sum_{i = 0}^{L - 1} p_i = 1  $$
+\end{center}
+where L is the number of different gray levels of a given picture, $n_i$ is the number of pixels of gray level \textit{i} and \textit{N} is the total number of pixels. Then, the probability of being in class \textit{Background} or \textit{Foregound} is
+\vspace{-0.5cm}
+\begin{center}
+$$ \omega_B = \sum_{i = 0}^{t} p_i \hspace{1cm} \omega_F = \sum_{i = t + 1}^{L} p_i $$
+\end{center}
+where \textit{t} is the threshold value. The mean values of the classes are
+\vspace{-0.5cm}
+\begin{center}
+$$ \mu_B = \sum_{i = 0}^{t} \frac{i * p_i}{n_B} \hspace{1cm} \mu_F = \sum_{i = t + 1}^{L} \frac{i * p_i}{n_F} $$
+\end{center}
+and the class variances are given by
+\vspace{-0.5cm}
+\begin{center}
+$$ \sigma_{B}^{2} = \sum_{i = 0}^{t} \frac{(i - \mu_B)^2 * n_i}{n_B} \hspace{1cm} \sigma_{F}^{2} = \sum_{i = t + 1}^{L} \frac{(i - \mu_F)^2 * n_i}{n_F} $$
+\end{center}
+Hence, the within-class variance is computed as
+\vspace{-0.5cm}
+\begin{center}
+$$ \sigma_{W}^{2} = \omega_B * \sigma_{B}^{2} + \omega_F * \sigma_{F}^{2} $$
+\end{center}
+Nevertheless, we can transform this minimization problem into a maximization problem by computing the inter-class variance, which is faster to compute
+\vspace{-0.5cm}
+\begin{center}
+% \sigma^{2} - \sigma_{W}^{2}
+$$ \sigma_{I}^{2} = \omega_B * \omega_F * (\mu_F - \mu_B)^2 $$
+\end{center}
 
-\subsection{Optimal thresholding Method}
+\subsection{Optimal thresholding by Clustering Method}
+Optimal thresholding methods select the threshold based on the minimization of a criterion function. Otsu, for example, tries to minimize the intra-class variance. This method tries to minimize the probability between the maxima of 2 distributions.
 
+We used Ridler Calvard Method which segments the image into two clusters (\textit{Background} and \textit{Foreground}) using the initial theshold value. The algorithm starts assuming that the four corners are the only pixels in the \textit{Background} and the rest is the \textit{Foregound}. It also selects an initial estimate for the threshold \textit{$t_1$}. At each step we compute the mean gray-level of the two clusters
+\vspace{-0.5cm}
+\begin{center}
+$$ \mu_{B}^{t_n} = \frac{\sum_{i = 0}^{t_n} i * p_i}{n_B} \hspace{1cm} \mu_{F}^{t_n} = \frac{\sum_{i = t_n + 1}^{L} i * p_i}{n_F} $$
+\end{center}
+Then, the new threshold is compute as
+\vspace{-0.5cm}
+\begin{center}
+$$ t_{n + 1} = \frac{\mu_{B} + \mu_{F}}{2} $$
+\end{center}
+The algorithm repeats these steps until \textit{t} stabilizes, which means that $|t_n - t_{n + 1}| < \varepsilon $.
 
 \subsection{Kapur, Sahoo and Wong Method}
 In this method two probability distributions are derived from the original gray level distribution of the image(i.e. object distribution and background distribution): 
@@ -89,6 +134,14 @@ D. Martín Carabias (2012). \textit{Analysis of image Thresholding Methods for a
 
 \bibitem{A survey of Thresholding Techniques}
 P. K. Sahoo, S. Soltani, K.C. Wong and Y.C. Chen (1988). \textit{A survey of Thresholding Techniques}. University of Waterloo, Waterloo, Canada  [Accessed 16 Mar. 2019].
+
+\bibitem{}N. Otsu, \textit{A Threshold Selection Method from Gray-Level Histograms}, in IEEE Transactions on Systems, Man, and Cybernetics, vol. 9, no. 1, pp. 62-66, Jan. 1979.
+[online] Available at http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=\&arnumber=4310076\&is
+number=4310064 [Acessed 17 Mar. 2019].
+
+\bibitem{}Dr. Andrew Greensted (2010), \textit{Otsu Thresholding}. [online]. Available at http://www.labbookpages.co.uk/software/imgProc/otsuThreshold.html [Accessed 17 Mar. 2019].
+
+\bibitem{}Senthilkumaran,  N.  \&  Sivapriya,  M.  (2017),  \textit{Riddler's  Thresholding Algorithm  for  DNA  Image  Using  ISODATA  Modified  Algorithm} Journal  of Information Technology, Vol.3, No.2, pp.41-48. [online] Available at: http://www.ijitjournal.org/volume-3/issue-2/IJIT-V3I2P9.pdf [Accessed 17 Mar. 2019].
 
 %TODO ficar els apunts del profe a bibliografia 
 \end{thebibliography}
