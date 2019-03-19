@@ -1,6 +1,7 @@
 \documentclass[12]{article}
 \usepackage[utf8]{inputenc}
 \usepackage{cite}
+\usepackage{float}
 \usepackage{graphicx}
 \usepackage{amssymb}
 \author{Xavier Martín Ballesteros and Adrià Cabeza Sant'Anna}
@@ -9,9 +10,9 @@
 \begin{document}
 \maketitle
   \vspace{1cm}
+  %QUEDA MOLT CURT MAYBE HO PODRÍEM TREURE
 	\begin{abstract}
-	%TODO
-Our goal is to discuss about different binarization methods. We have used the \textit{basic binarization}, \textit{p-tile thresholding}, \textit{optimal thresholding}, \textit{kapur method}.
+Our goal is to detect the percentage of fat in chops using images. We discuss about the different binarization methods we have used, such as \textit{basic binarization}, \textit{p-tile thresholding}, \textit{optimal thresholding} and \textit{kapur method}. Finally, we have analysed our results and decided which method is the best one.
 \end{abstract}
 
 \newpage
@@ -107,16 +108,27 @@ Then the optimal threshold $t^{*}$ is defined as the grey level which maximizes 
 $$t^{*}=\ ArgMax\left(H_b(t) + H_w(t)\right)$$
 \end{center}
 \section{Results}
-
-\begin{table}[h]
+In the following section we will see the results of our methods being applied to the dataset given. A total of 14 chops images will be analysed to check how many fat do they have.  
+Finally we will discuss which method was to best one and we will take our conclusions %maybe també hauríem de posar el valor del greix que hem trobat mirant l'histograma
+\begin{table}[H]
 \centering
-\begin{tabular}{|l|l|l|l|}
-\hline
-& bla & bli & blu \\  \hline
-\textbf{Otsu} &  &  &  \\ \hline
- \textbf{Kapur} & & &  \\  \hline
- \textbf{Optimal Thresholding} & & &  \\ \hline
-  \textbf{P-tile} & & & \\ \hline
+\begin{tabular}{|l|l|l|l|l|}
+\hline	
+Picture of the chop & \textbf{Otsu} & \textbf{Kapur} & \textbf{Optimal Thresholding} & \textbf{P-tile} \\  \hline
+ F1011flb.bmp & 29.1682  & 31.3817 & 29.2252  & 39.5698  \\ \hline
+  F1019flb.bmp & 33.2429 & 36.2029 & FALLA A SACO & 39.5983 \\  \hline
+  F1031flb.bmp & 38.1320 & 44.5639 & 38.4935 & 39.2967  \\ \hline
+  F1051flb.bmp & 33.8235 & 36.8900 & 35.6833 & 39.5664\\ \hline
+F1053flb.bmp & 35.6418 & FALLA A SACO & 35.6833 & 37.8899\\ \hline
+F1059flb.bmp & 28.4953 & FALLA & FALLA & FALLA \\ \hline
+F1064flb.bmp & 26.4423 & 26.0063 & 27.1537 & FALLA A SACO\\ \hline
+F1079f1b.bmp & 31.2544 & FALLA &  FALLA & FALLA \\ \hline
+F1083f1b.bmp & 27.5718 & FALLA & 27.7740  & FALLA \\ \hline
+F1096f1b.bmp & 28.8945 & FALLA & FALLA & FALLA \\ \hline
+F1097flb.bmp & 29.2960 & FALLA & FALLA & FALLA \\ \hline
+F1101flb.bmp & 33.2675 & FALLA & 34.7553 & FALLA \\ \hline
+F1102f1b.bmp & 27.6687 &FALLA &FALLA	 & FALLA \\ \hline
+F1103f1b.bmp  & 34.0777 & FALLA & 37.7081 & 39.6781\\ \hline
 \end{tabular}
 \caption{Results obtained using different methods of binarization}
 \label{Results}
