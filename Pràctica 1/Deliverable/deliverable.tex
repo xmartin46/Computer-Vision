@@ -98,7 +98,7 @@ Optimal thresholding methods select the threshold based on the minimization of a
 We used Ridler Calvard Method which segments the image into two clusters (\textit{Background} and \textit{Foreground}) using the initial threshold value. The algorithm starts assuming that the four corners are the only pixels in the \textit{Background} and the rest is the \textit{Foregound}. It also selects an initial estimate for the threshold \textit{$t_1$}. At each step we compute the mean gray-level of the two clusters
 \vspace{-0.5cm}
 \begin{center}
-$$ \mu_{B}^{t_n} = \frac{\sum_{i = 0}^{t_n} f(i)}{n_B} \hspace{1cm} \mu_{F}^{t_n} = \frac{\sum_{i = t_n + 1}^{L} f(i)}{n_F} $$
+$$ \mu_{B}^{t_n} = \frac{\sum_{i = 0}^{t_n} i}{n_B} \hspace{1cm} \mu_{F}^{t_n} = \frac{\sum_{i = t_n + 1}^{L - 1} i}{n_F} $$
 \end{center}
 Then, the new threshold is computed as
 \vspace{-0.5cm}
@@ -138,20 +138,20 @@ Finally, we will discuss which method was the best one and we will take our conc
 \centering
 \begin{tabular}{|l|l|l|l|l|l|}
 \hline	Picture of the chop & \textbf{Manual} & \textbf{Otsu} & \textbf{Optimal} & \textbf{Kapur} & \textbf{P-tile} \\  \hline
-F1011flb.bmp &  27.8966	&  29.1682	&  29.4569	&  33.5064	&  33.5064\\ \hline
-F1019flb.bmp &  23.1186	&  33.9151	&  35.6812	&  35.6812	&  33.9151\\ \hline
-F1031flb.bmp &  35.9351	&  37.7524	&  38.0941	&  44.8433	&  34.0385\\ \hline
-F1051flb.bmp &  22.2951	&  34.7683	&  37.1028	&  27.9850	&  34.7683\\ \hline
-F1053flb.bmp &  31.4792	&  35.1061	&  35.5529	&  40.1870	&  33.9425\\ \hline
-F1059flb.bmp &  21.7685	&  27.3831	&  28.5891	&  28.7851	&  33.2403\\ \hline
-F1064flb.bmp &  17.7466	&  26.5649	&  26.5649	&  22.3713	&  33.5924\\ \hline
-F1079flb.bmp &  13.6092	&  30.5205	&  32.8750	&  24.5003	&  33.1394\\ \hline
-F1083flb.bmp &  18.2576	&  27.3202	&  27.5205	&  21.9712	&  33.5249\\ \hline
-F1096flb.bmp &  22.9371	&  27.5552	&  28.1717	&  24.0797	&  33.3689\\ \hline
-F1097flb.bmp &  23.7057	&  28.5522	&  30.5722	&  29.0654	&  34.1882\\ \hline
-F1101flb.bmp &  24.3930	&  32.8038	&  34.2738	&  39.2278	&  34.2738\\ \hline
-F1102flb.bmp &  25.9000	&  27.1012	&  27.8847	&  30.0717	&  34.2123\\ \hline
-F1103flb.bmp &  19.3181	&  33.2998	&  36.7464	&  27.1630	&  33.2998\\ \hline
+'F1011flb.bmp' & 27.9423	& 29.1830	& 29.4718	& 32.0885	& 33.5235 \\ \hline
+'F1019flb.bmp' & 22.7007	& 33.2420	& 33.7937	& 35.5768	& 33.7937 \\ \hline
+'F1031flb.bmp' & 35.7952	& 38.2012	& 38.5656	& 43.6927	& 34.3695 \\ \hline
+'F1051flb.bmp' & 22.2951	& 33.7487	& 35.5875	& 28.6444	& 33.7487 \\ \hline
+'F1053flb.bmp' & 31.4224	& 35.5413	& 35.9936	& 39.9009	& 34.3633 \\ \hline
+'F1059flb.bmp' & 21.7666	& 28.4536	& 28.7125	& 30.1826	& 34.8540 \\ \hline
+'F1064flb.bmp' & 17.6764	& 26.3488	& 27.0577	& 22.7853	& 34.2446 \\ \hline
+'F1079flb.bmp' & 13.6092	& 31.2078	& 33.6154	& 25.0521	& 33.8857 \\ \hline
+'F1083flb.bmp' & 18.2551	& 27.6612	& 27.8640	& 22.2453	& 33.9433 \\ \hline
+'F1096flb.bmp' & 22.9326	& 28.8762	& 28.8762	& 25.2340	& 34.9686 \\ \hline
+'F1097flb.bmp' & 23.7057	& 29.2290	& 29.7544	& 29.7544	& 34.9986 \\ \hline
+'F1101flb.bmp' & 24.4286	& 33.4608	& 34.9602	& 40.0134	& 34.9602 \\ \hline
+'F1102flb.bmp' & 25.9011	& 27.8115	& 28.6156	& 30.8599	& 34.4794 \\ \hline
+'F1103flb.bmp' & 19.2648	& 34.0299	& 37.7080	& 27.8738	& 34.1712 \\ \hline
 \end{tabular}
 \caption{Results of the fat percentage obtained using different methods of binarization}
 \label{Results}
