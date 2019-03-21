@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.12.11)  19 MAR 2019 11:46
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.12.11)  21 MAR 2019 10:46
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -500,82 +500,82 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 \openout3 = `deliverable.toc'.
 
  [2] [3]
-Overfull \hbox (92.59857pt too wide) in paragraph at lines 115--133
+Overfull \hbox (92.59857pt too wide) in paragraph at lines 116--134
  [][] 
  []
 
 [4]
-Underfull \hbox (badness 4279) in paragraph at lines 140--141
+Underfull \hbox (badness 4279) in paragraph at lines 147--148
 []\OT1/cmr/m/n/10 C. Hen-den (2004).  \OT1/cmr/m/it/10 Ex-er-cise in Com-puter 
 Vi-sion. A Com-par-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 140--141
+Underfull \hbox (badness 10000) in paragraph at lines 147--148
 \OT1/cmr/m/it/10 i-son of Thresh-old-ing Meth-ods. \OT1/cmr/m/n/10 [on-line] NT
 NU. Avail-able at:
  []
 
 
-Underfull \hbox (badness 3668) in paragraph at lines 140--141
+Underfull \hbox (badness 3668) in paragraph at lines 147--148
 \OT1/cmr/m/n/10 http://www.pvv.org/ per-chrh/papers/datasyn/paper2/report.pdf [
 Ac-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 144--145
+Underfull \hbox (badness 10000) in paragraph at lines 151--152
 []\OT1/cmr/m/n/10 D. Mart^^S^^Pn Cara-bias (2012). \OT1/cmr/m/it/10 Anal-y-sis 
 of im-age Thresh-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 144--145
+Underfull \hbox (badness 10000) in paragraph at lines 151--152
 \OT1/cmr/m/it/10 old-ing Meth-ods for ap-pli-ca-tion to aug-mented re-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 144--145
+Underfull \hbox (badness 10000) in paragraph at lines 151--152
 \OT1/cmr/m/it/10 al-ity en-v-iorn-ments. \OT1/cmr/m/n/10 [on-line] UCM. Avail-a
 ble at:
  []
 
 
-Overfull \hbox (3.37297pt too wide) in paragraph at lines 144--145
+Overfull \hbox (3.37297pt too wide) in paragraph at lines 151--152
 \OT1/cmr/m/n/10 https://eprints.ucm.es/16932/1/Tesis[]Master[]Daniel[]Martin[]C
 arabias.pdf
  []
 
-
-Underfull \hbox (badness 6268) in paragraph at lines 150--153
+[5]
+Underfull \hbox (badness 6268) in paragraph at lines 157--160
 []\OT1/cmr/m/n/10 N. Otsu, \OT1/cmr/m/it/10 A Thresh-old Se-lec-tion Method fro
 m Gray-Level His-
  []
 
 
-Underfull \hbox (badness 4328) in paragraph at lines 150--153
+Underfull \hbox (badness 4328) in paragraph at lines 157--160
 \OT1/cmr/m/it/10 tograms\OT1/cmr/m/n/10 , in IEEE Trans-ac-tions on Sys-tems, M
 an, and Cy-ber-
  []
 
 
-Underfull \hbox (badness 1389) in paragraph at lines 150--153
+Underfull \hbox (badness 1389) in paragraph at lines 157--160
 \OT1/cmr/m/n/10 net-ics, vol. 9, no. 1, pp. 62-66, Jan. 1979. [on-line] Avail-a
 ble at
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 150--153
+Underfull \hbox (badness 10000) in paragraph at lines 157--160
 \OT1/cmr/m/n/10 http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=4310076
 &is
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 154--155
+Underfull \hbox (badness 10000) in paragraph at lines 161--162
 \OT1/cmr/m/n/10 http://www.labbookpages.co.uk/software/imgProc/otsuThreshold.ht
 ml
  []
 
-[5] [6] (./deliverable.aux)
+[6] (./deliverable.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
@@ -587,7 +587,7 @@ Here is how much of TeX's memory you used:
  5497 multiletter control sequences out of 15000+600000
  12801 words of font info for 49 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
- 41i,8n,26p,501b,209s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 41i,8n,26p,501b,207s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/share/texli
@@ -604,7 +604,7 @@ hare/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/te
 xlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/
 texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/share/texlive/texmf-d
 ist/fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on deliverable.pdf (6 pages, 205441 bytes).
+Output written on deliverable.pdf (6 pages, 206595 bytes).
 PDF statistics:
  91 PDF objects out of 1000 (max. 8388607)
  65 compressed objects within 1 object stream

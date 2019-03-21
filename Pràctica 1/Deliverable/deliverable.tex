@@ -87,7 +87,8 @@ $$ t_{n + 1} = \frac{\mu_{B} + \mu_{F}}{2} $$
 The algorithm repeats these steps until \textit{t} stabilizes, which means that $|t_n - t_{n + 1}| < \varepsilon $.
 
 \subsection{Kapur, Sahoo and Wong Method}
-In this method two probability distributions are derived from the original gray level distribution of the image(i.e. object distribution and background distribution): 
+Kapur, Sahoo and Wong Method is the method we have implemented from the entropic methods family. In this method we work with the gray level histogram to obtain the optimal threshold applying information theory.
+The way it works is the following: two probability distributions are derived from the original gray level distribution of the image(i.e. object distribution and background distribution): 
 \vspace{-0.5cm}
 \begin{center}
 $$\frac{p_0}{P_t},\frac{p_1}{P_t},...,\frac{p_t}{P_t}$$
@@ -97,12 +98,12 @@ $$\frac{p_{t+1}}{1-P_t},\frac{p_{t+2}}{1-P_t},...,\frac{p_{l-1}}{1-P_t}$$
 \end{center}
 \vspace{0.4cm}
 
-where \textit{t} is the value of the threshold and $P_t = \sum_{i=0}^{t}{p_i}$. Define
+where \textit{t} is the value of the threshold and $P_t = \sum_{i=0}^{t}{p_i}$. Then, we define
 
 $$H_b(t) = - \sum_{i = 0}^{t} \frac{p_i}{P_t}log_e\left(\frac{p_i}{P_t}\right)$$
 $$ H_b(t) = - \sum_{i = t+1}^{l-1} \frac{p_i}{1-p_i}log_e\left(\frac{p_i}{1-P_t}\right)$$
 
-Then the optimal threshold $t^{*}$ is defined as the grey level which maximizes $H_b(t)+H_w(t)$, that is, 
+And finally the optimal threshold $t^{*}$ is defined as the grey level which maximizes $H_b(t)+H_w(t)$, that is, 
 \vspace{-0.5cm}
 \begin{center}
 $$t^{*}=\ ArgMax\left(H_b(t) + H_w(t)\right)$$
@@ -133,6 +134,12 @@ F1103f1b.bmp  & 34.0777 & FALLA & 37.7081 & 39.6781\\ \hline
 \caption{Results obtained using different methods of binarization}
 \label{Results}
 \end{table}
+
+
+Even though we already know that \textit{P-tile} does not make sense for this assignment we have implemented it because we wanted to expand our knowledge about different algorithms related to find the optimal threshold automatically. 
+
+After experimenting with several different values for the percentage we have set it to 70\% which gave us the best results. 
+
 
 \begin{thebibliography}{100}
 
