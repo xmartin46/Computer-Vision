@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.12.11)  21 MAR 2019 10:46
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.12.11)  21 MAR 2019 14:09
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -346,6 +346,10 @@ LaTeX Info: Redefining \cite on input line 302.
 LaTeX Info: Redefining \nocite on input line 332.
 Package: cite 2015/02/27  v 5.5
 )
+(/usr/share/texlive/texmf-dist/tex/latex/preprint/fullpage.sty
+Package: fullpage 1999/02/23 1.1 (PWD)
+\FP@margin=\skip43
+)
 (/usr/share/texlive/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \c@float@type=\count87
@@ -354,13 +358,37 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \@float@everytoks=\toks17
 \@floatcapt=\box27
 )
-(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
-Package: graphicx 2017/06/01 v1.1a Enhanced LaTeX Graphics (DPC,SPQR)
+(/usr/share/texlive/texmf-dist/tex/latex/caption/subcaption.sty
+Package: subcaption 2016/05/22 v1.1-161 Sub-captions (AR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2016/02/21 v3.3-144 Customizing captions (AR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2016/05/22 v1.7-166 caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 67.
 
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 \KV@toks@=\toks18
 )
+\captionmargin=\dimen103
+\captionmargin@=\dimen104
+\captionwidth=\dimen105
+\caption@tempdima=\dimen106
+\caption@indent=\dimen107
+\caption@parindent=\dimen108
+\caption@hangindent=\dimen109
+)
+\c@ContinuedFloat=\count88
+Package caption Info: float package is loaded.
+)
+\c@subfigure=\count89
+\c@subtable=\count90
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2017/06/01 v1.1a Enhanced LaTeX Graphics (DPC,SPQR)
+
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
 Package: graphics 2017/06/25 v1.2c Standard LaTeX Graphics (DPC,SPQR)
 
@@ -375,8 +403,8 @@ Package graphics Info: Driver file: pdftex.def on input line 99.
 (/usr/share/texlive/texmf-dist/tex/latex/graphics-def/pdftex.def
 File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
 ))
-\Gin@req@height=\dimen103
-\Gin@req@width=\dimen104
+\Gin@req@height=\dimen110
+\Gin@req@width=\dimen111
 )
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amssymb.sty
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
@@ -403,30 +431,32 @@ LaTeX Warning: Label `' multiply defined.
 )
 \openout1 = `deliverable.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: End \AtBeginDocument code.
  (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count88
-\scratchdimen=\dimen105
+\scratchcounter=\count91
+\scratchdimen=\dimen112
 \scratchbox=\box28
-\nofMPsegments=\count89
-\nofMParguments=\count90
+\nofMPsegments=\count92
+\nofMParguments=\count93
 \everyMPshowfont=\toks20
-\MPscratchCnt=\count91
-\MPscratchDim=\dimen106
-\MPnumerator=\count92
-\makeMPintoPDFobject=\count93
+\MPscratchCnt=\count94
+\MPscratchDim=\dimen113
+\MPnumerator=\count95
+\makeMPintoPDFobject=\count96
 \everyMPtoPDFconversion=\toks21
 ) (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
@@ -484,12 +514,12 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-LaTeX Font Info:    Try loading font information for U+msa on input line 11.
+LaTeX Font Info:    Try loading font information for U+msa on input line 13.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 11.
+LaTeX Font Info:    Try loading font information for U+msb on input line 13.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -499,81 +529,51 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 \tf@toc=\write3
 \openout3 = `deliverable.toc'.
 
- [2] [3]
-Overfull \hbox (92.59857pt too wide) in paragraph at lines 116--134
- [][] 
- []
+ [2] [3] [4]
+<a.png, id=29, 1371.1225pt x 770.88pt>
+File: a.png Graphic file (type png)
+<use a.png>
+Package pdftex.def Info: a.png  used on input line 154.
+(pdftex.def)             Requested size: 187.90271pt x 105.6405pt.
+<polymagnet.png, id=31, 2890.8pt x 1888.05376pt>
+File: polymagnet.png Graphic file (type png)
+<use polymagnet.png>
+Package pdftex.def Info: polymagnet.png  used on input line 160.
+(pdftex.def)             Requested size: 187.90271pt x 122.69899pt.
 
-[4]
-Underfull \hbox (badness 4279) in paragraph at lines 147--148
-[]\OT1/cmr/m/n/10 C. Hen-den (2004).  \OT1/cmr/m/it/10 Ex-er-cise in Com-puter 
-Vi-sion. A Com-par-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 147--148
-\OT1/cmr/m/it/10 i-son of Thresh-old-ing Meth-ods. \OT1/cmr/m/n/10 [on-line] NT
-NU. Avail-able at:
- []
-
-
-Underfull \hbox (badness 3668) in paragraph at lines 147--148
-\OT1/cmr/m/n/10 http://www.pvv.org/ per-chrh/papers/datasyn/paper2/report.pdf [
-Ac-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 151--152
+Underfull \hbox (badness 10000) in paragraph at lines 177--178
 []\OT1/cmr/m/n/10 D. Mart^^S^^Pn Cara-bias (2012). \OT1/cmr/m/it/10 Anal-y-sis 
-of im-age Thresh-
+of im-age Thresh-old-ing Meth-ods for ap-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 151--152
-\OT1/cmr/m/it/10 old-ing Meth-ods for ap-pli-ca-tion to aug-mented re-
+Underfull \hbox (badness 10000) in paragraph at lines 177--178
+\OT1/cmr/m/it/10 pli-ca-tion to aug-mented re-al-ity en-v-iorn-ments. \OT1/cmr/
+m/n/10 [on-line] UCM. Avail-able at:
+ []
+
+[5 <./a.png> <./polymagnet.png>]
+Underfull \hbox (badness 1215) in paragraph at lines 183--186
+\OT1/cmr/m/n/10 Sys-tems, Man, and Cy-ber-net-ics, vol. 9, no. 1, pp. 62-66, Ja
+n. 1979. [on-line] Avail-able at
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 151--152
-\OT1/cmr/m/it/10 al-ity en-v-iorn-ments. \OT1/cmr/m/n/10 [on-line] UCM. Avail-a
-ble at:
+Underfull \hbox (badness 10000) in paragraph at lines 187--188
+[]\OT1/cmr/m/n/10 Dr. An-drew Green-sted (2010), \OT1/cmr/m/it/10 Otsu Thresh-o
+ld-ing\OT1/cmr/m/n/10 . [on-line]. Avail-able at
  []
 
-
-Overfull \hbox (3.37297pt too wide) in paragraph at lines 151--152
-\OT1/cmr/m/n/10 https://eprints.ucm.es/16932/1/Tesis[]Master[]Daniel[]Martin[]C
-arabias.pdf
- []
-
-[5]
-Underfull \hbox (badness 6268) in paragraph at lines 157--160
-[]\OT1/cmr/m/n/10 N. Otsu, \OT1/cmr/m/it/10 A Thresh-old Se-lec-tion Method fro
-m Gray-Level His-
- []
-
-
-Underfull \hbox (badness 4328) in paragraph at lines 157--160
-\OT1/cmr/m/it/10 tograms\OT1/cmr/m/n/10 , in IEEE Trans-ac-tions on Sys-tems, M
-an, and Cy-ber-
- []
-
-
-Underfull \hbox (badness 1389) in paragraph at lines 157--160
-\OT1/cmr/m/n/10 net-ics, vol. 9, no. 1, pp. 62-66, Jan. 1979. [on-line] Avail-a
-ble at
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 157--160
-\OT1/cmr/m/n/10 http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=4310076
-&is
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 161--162
-\OT1/cmr/m/n/10 http://www.labbookpages.co.uk/software/imgProc/otsuThreshold.ht
-ml
- []
+! Undefined control sequence.
+<recently read> \lt 
+                    
+l.193 $\lt
+          $
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
 [6] (./deliverable.aux)
 
@@ -581,33 +581,31 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 2214 strings out of 494880
- 28636 string characters out of 6179600
- 87016 words of memory out of 5000000
- 5497 multiletter control sequences out of 15000+600000
- 12801 words of font info for 49 fonts, out of 8000000 for 9000
+ 3369 strings out of 494880
+ 49395 string characters out of 6179600
+ 99992 words of memory out of 5000000
+ 6638 multiletter control sequences out of 15000+600000
+ 12148 words of font info for 47 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
- 41i,8n,26p,501b,207s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 42i,7n,40p,501b,440s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
-e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/share/texli
-ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dis
-t/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texlive/texmf-dist/fonts
-/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/
-public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
-amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
-s/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
-r7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb><
-/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/s
-hare/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/te
-xlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/share/texlive/texmf-d
-ist/fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on deliverable.pdf (6 pages, 206595 bytes).
+e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texl
+ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texlive/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr
+9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/s
+hare/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/t
+exlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb>
+Output written on deliverable.pdf (6 pages, 733315 bytes).
 PDF statistics:
- 91 PDF objects out of 1000 (max. 8388607)
- 65 compressed objects within 1 object stream
+ 88 PDF objects out of 1000 (max. 8388607)
+ 60 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 11 words of extra memory for PDF output out of 10000 (max. 10000000)
 

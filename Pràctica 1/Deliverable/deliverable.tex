@@ -1,7 +1,9 @@
 \documentclass[12]{article}
 \usepackage[utf8]{inputenc}
 \usepackage{cite}
+\usepackage{fullpage}
 \usepackage{float}
+\usepackage{subcaption}
 \usepackage{graphicx}
 \usepackage{amssymb}
 \author{Xavier Martín Ballesteros and Adrià Cabeza Sant'Anna}
@@ -11,14 +13,15 @@
 \maketitle
   \vspace{1cm}
   %QUEDA MOLT CURT MAYBE HO PODRÍEM TREURE
-	\begin{abstract}
-Our goal is to detect the percentage of fat in chops using images. We discuss about the different binarization methods we have used, such as \textit{basic binarization}, \textit{p-tile thresholding}, \textit{optimal thresholding} and \textit{kapur method}. Finally, we have analysed our results and decided which method is the best one.
-\end{abstract}
+%	\begin{abstract}
+%Our goal is to detect the percentage of fat in chops using images. We discuss about the different binarization methods we have used, such as \textit{basic binarization}, \textit{p-tile thresholding}, \textit{optimal thresholding} and \textit{kapur method}. Finally, we have analysed our results and decided which method is the best one.
+%\end{abstract}
 
 \newpage
 \tableofcontents
 %podem posar un \newpage aquí si volem 
 \section{Introduction}
+%afegir coses tipus lo de la mascara i yasta
 The objective of this assignment is to detect the percentage of fat in chops using images. To do it, we have used several different threshold techniques. Those methods consists in setting a constant value called \textit{threshold} ($T$) and separe the pixels depending its value ($ f(i,j)$):
 \vspace{-0.6cm}
 \begin{center}
@@ -108,9 +111,13 @@ And finally the optimal threshold $t^{*}$ is defined as the grey level which max
 \begin{center}
 $$t^{*}=\ ArgMax\left(H_b(t) + H_w(t)\right)$$
 \end{center}
+
+%MIRAR 
+In our implementation, in order to do all the loops using matricial operations we have inserted a tiny value ($1\times 10^{-3}$) as an intended error in our calculations because we wanted to avoid NaN because the division by 0 cases. 
 \section{Results}
 In the following section we will see the results of our methods being applied to the dataset given. A total of 14 chops images will be analysed to check how many fat do they have.  
 Finally we will discuss which method was to best one and we will take our conclusions %maybe també hauríem de posar el valor del greix que hem trobat mirant l'histograma
+\subsection{Table}
 \begin{table}[H]
 \centering
 \begin{tabular}{|l|l|l|l|l|}
@@ -140,6 +147,26 @@ Even though we already know that \textit{P-tile} does not make sense for this as
 
 After experimenting with several different values for the percentage we have set it to 70\% which gave us the best results. 
 
+\subsection{Images}
+
+\begin{figure}[H]
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[width=.8\linewidth]{a.png}
+  \caption{1a}
+  \label{fig:sfig1}
+\end{subfigure}%
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[width=.8\linewidth]{polymagnet.png}
+  \caption{1b}
+  \label{fig:sfig2}
+\end{subfigure}
+\caption{plots of....}
+\label{fig:fig}
+\end{figure}
+
+
 
 \begin{thebibliography}{100}
 
@@ -165,6 +192,20 @@ number=4310064 [Acessed 17 Mar. 2019].
 %TODO ficar els apunts del profe a bibliografia 
 \end{thebibliography}
 
+91 160
+112 200
+100 190
+105 200
+78 158
+57 168
+75 160
+69 186
+66 165
+54 160
+63 165
+66 170
+67 170
+54 153
 
 
 \end{document}

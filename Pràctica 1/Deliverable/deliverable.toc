@@ -2,7 +2,9 @@
 \contentsline {section}{\numberline {2}Binarization}{2}
 \contentsline {subsection}{\numberline {2.1}Basic Binarization}{2}
 \contentsline {subsection}{\numberline {2.2}P-tile Method}{2}
-\contentsline {subsection}{\numberline {2.3}Otsu Method}{3}
+\contentsline {subsection}{\numberline {2.3}Otsu Method}{2}
 \contentsline {subsection}{\numberline {2.4}Optimal thresholding by Clustering Method}{3}
 \contentsline {subsection}{\numberline {2.5}Kapur, Sahoo and Wong Method}{4}
-\contentsline {section}{\numberline {3}Results}{5}
+\contentsline {section}{\numberline {3}Results}{4}
+\contentsline {subsection}{\numberline {3.1}Table}{5}
+\contentsline {subsection}{\numberline {3.2}Images}{5}
