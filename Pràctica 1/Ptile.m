@@ -1,23 +1,21 @@
 function [threshold] = Ptile(im, percentage);
-    [rows, cols] = size(im);
-    total_pixels = rows * cols;
+    [pixelPerValueArray, ~] = imhist(im);
+    percentages = pixelPerValueArray/sum(pixelPerValueArray);
     
-%     freq = zeros(256, 1);
-
-%     for i = 1:256
-%         freq(i) = size(im(im == (i - 1)), 1)/total_pixels;
-%     end
-    
+    % Boolean
     found = 0;
-    f_total = 0;
-    i = 1;
-    while i <= 256 & ~found
-        f_total = f_total + size(im(im == (i - 1)), 1)/total_pixels; % f_totla + freq(i);
-        if f_total >= percentage
-            threshold = i/256;
+
+    accumulated_percentage = 0;
+    t = 1;
+    while t <= 256 & ~found
+        % percentages(1:t)
+        accumulated_percentage = accumulated_percentage + percentages(t);
+        
+        if accumulated_percentage >= percentage
+            threshold = t/256;
             found = 1;
         end
-        i = i + 1;
+        t = t + 1;
     end
 end
 

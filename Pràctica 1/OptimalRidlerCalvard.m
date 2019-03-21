@@ -1,23 +1,29 @@
-function [Tt] = OptimalRidlerCalvard(im, error)
+function [threshold] = OptimalRidlerCalvard(im, error)
     [rows, cols] = size(im);
 
-    Tt_1 = min(im);
+    % Actual threshold value
+    T_act = min(im);
+    
+    % Initial background pixels (4 corners of the image)
+    background_initial_pixels = im(1, 1) + im(rows, 1) + im(1, cols) + im(rows, cols);
+    uB = double(background_initial_pixels/4);
+    
+    % Initial object pixels (all except from the 4 corners of the image)
     all = sum(im(:));
-    background = im(1, 1) + im(rows, 1) + im(1, cols) + im(rows, cols);
-    uB = double(background/4);
-    uO = double((all - background)/((cols * rows) - 4));
-    Tt = double((uB + uO)/2);
+    uO = double((all - background_initial_pixels)/((cols * rows) - 4));
+    
+    % Next threshold value
+    T_next = double((uB + uO)/2);
 
-    while abs(double(Tt) - double(Tt_1)) > error % Tt ~= Tt_1
-        O = im(im > Tt_1);
-        B = im(im <= Tt_1);
+    while abs(double(T_next) - double(T_act)) > error % |T_next - T_act| > error
+        O = im(im > T_act);
+        B = im(im <= T_act);
 
         uB = double(sum(B)/size(B, 1));
         uO = double(sum(O)/size(O, 1));
 
-        Tt = Tt_1;
-        Tt_1 = double((uB + uO)/2);
+        T_next = T_act;
+        T_act = double((uB + uO)/2);
     end
-    Tt = Tt/256;
+    threshold = T_next/256;
 end
-
