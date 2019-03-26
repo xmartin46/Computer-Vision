@@ -30,3 +30,10 @@ Per quan estigui public:
 
 - [Segmentation using Region Growing and K-means](https://github.com/xmartin46/VC/blob/master/S5/Sessio5.pdf)
 
+## First assignment
+- [Meat Control Quality](https://github.com/xmartin46/VC/blob/master/Pr%C3%A0ctica%201/Deliverable/deliverable.pdf)
+
+### Sixth class
+
+- [Dilatation, Erosion, Erosion and Opening: morphology ](https://github.com/xmartin46/VC/blob/master/S6/Sessio6.pdf)
+
