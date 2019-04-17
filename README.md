@@ -37,3 +37,18 @@ Per quan estigui public:
 
 - [Dilatation, Erosion, Erosion and Opening: morphology ](https://github.com/xmartin46/VC/blob/master/S6/Sessio6.pdf)
 
+> PREGUNTAR PROFE
+# TODO LIST
+
+- Watershead amb markers
+  - HOW?  Superpixel + merging region  
+- Decidir característiques 
+  - Com obtenir-les??
+  - WIDTH I LENGTH?¿¿?
+- Training and validation split
+- Decide classifier
+  - Fusionar classificadors i fer coses guays  
+- Classificar i etiquetar 
+
+Utilitzar centroid és bo per identificar la forma
+
