@@ -6,9 +6,11 @@ function [features] = getFeatures(color, segmented)
     rgbNorm = double(color)./(double(norm) + 0.001);
 
     % Histograma del color
-    h1 = histo3D(rgbNorm, 16);
-    h1 = imgaussfilt3(h1, 1.5);
-    h1 = reshape(h1,1,[]);
+    [hr hg hb] = histo3D(rgbNorm, segmented, 16);
+    hr = imgaussfilt3(hr, 1.5);
+    hg = imgaussfilt3(hg, 1.5);
+    hb = imgaussfilt3(hb, 1.5);
+
     % Compactness
     C = getCompactness(segmented);
     
@@ -18,7 +20,7 @@ function [features] = getFeatures(color, segmented)
     % Fourier
     fourier = getForma(segmented, 5);
     fourier = reshape(fourier.',1,[]);
-    % Relaci� BoundingBox amb Centroid
+    % Relacio BoundingBox amb Centroid
     [x, y] = boundingBox(segmented);
     
     % Light a and b color dimensions
@@ -27,6 +29,11 @@ function [features] = getFeatures(color, segmented)
     lab2 = reshape(lab(:,:,2),1,[]);
     lab3 = reshape(lab(:,:,3),1,[]);
     
-    features = cat(2, petals, C, h1); %lab1,lab2,lab3);
+    
+    segmented = segmented == 1;
+
+    [feat, ~] = getHOG(segmented);
+
+    features = cat(2, hr, hg, hb, fourier, C, petals, x, y, feat); %lab1,lab2,lab3);
 end
 

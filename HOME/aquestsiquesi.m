@@ -1,10 +1,10 @@
 clear all
 close all
 % TOTES LES IMATGES PNG 
-% ARA MATEIX ÉS CUTRE I KNOW
+% ARA MATEIX CUTRE I KNOW
 BOTODOR = ["1121"  "1132"  "1143"  "1154"  "1168" "1122"  "1133"  "1144"  "1155"  "1170" "1123"  "1134"  "1145"  "1156"  "1173" "1124"  "1135"  "1146"  "1157"  "1174" "1125"  "1136"  "1147"  "1158"  "1177" "1126"  "1137"  "1148"  "1159"  "1185" "1127"  "1138"  "1149"  "1160"  "1187" "1128"  "1139"  "1150"  "1161" "1129"  "1140"  "1151"  "1162" "1130"  "1141"  "1152"  "1164" "1131"  "1142"  "1153"  "1166"];
 CROCUS = ["0322"  "0332"  "0343"  "0354"  "0368" "0323"  "0333"  "0344"  "0355"  "0372" "0324"  "0335"  "0345"  "0357"  "0374" "0325"  "0336"  "0347"  "0358"  "0375" "0326"  "0337"  "0348"  "0359"  "0377" "0327"  "0338"  "0349"  "0360"  "0381" "0328"  "0339"  "0350"  "0363"  "0382" "0329"  "0340"  "0351"  "0364" "0330"  "0341"  "0352"  "0365" "0331"  "0342"  "0353"  "0366"];
-BUIXOL = ["1201"  "1213"  "1225"  "1237"  "1249" "1202"  "1214"  "1226"  "1238"  "1250" "1203"  "1215"  "1227"  "1239"  "1251" "1204"  "1216"  "1228"  "1240"  "1252" "1205"  "1217"  "1229"  "1241"  "1254" "1206"  "1218"  "1230"  "1242"  "1255" "1207"  "1219"  "1231"  "1243"  "1267" "1208"  "1220"  "1232"  "1244"  "1268" "1209"  "1221"  "1233"  "1245"  "1269" "1210"  "1222"  "1234"  "1246"  "1270" "1211"  "1223"  "1235"  "1247"  "1272" "1212"  "1224"  "1236"  "1248"  "1274"];
+BUIXOL = ["1201"  "1213"  "1225"  "1237"  "1249" "1202"  "1214"  "1226"  "1238"  "1250" "1203"  "1215"  "1227"  "1239"  "1251" "1204"  "1216"  "1228"  "1240"  "1252" "1205"  "1217"  "1229"  "1241"  "1254" "1206"  "1218"  "1230"  "1242"  "1255" "1207"  "1219"  "1231"  "1243"  "1267" "1208"  "1220"  "1232"  "1244"  "1268" "1209"  "1221"  "1233"  "1245" "1210"  "1222"  "1234"  "1246" "1211"  "1223"  "1235"  "1247"  "1272" "1212"  "1224"  "1236"  "1248"  "1274"];
 
 %TODO: PROVAR AMB AQUESTES
 DENTDELLEO = ["0961"  "0972"  "0983"  "0994"  "1007" "0962"  "0973"  "0984"  "0995"  "1008" "0963"  "0974"  "0985"  "0996"  "1009" "0964"  "0975"  "0986"  "0997"  "1012" "0965"  "0976"  "0987"  "0999"  "1013" "0966"  "0977"  "0988"  "1000"  "1016" "0967"  "0978"  "0989"  "1001"  "1018" "0968"  "0979"  "0990"  "1002"  "1019" "0969"  "0980"  "0991"  "1003" "0970"  "0981"  "0992"  "1004" "0971"  "0982"  "0993"  "1006" ];
@@ -17,50 +17,159 @@ LLIRI = ["0401"  "0416"  "0431"  "0446"  "0461" "0402"  "0417"  "0432"  "0447"  
 NARCIS = ["0001"  "0015"  "0029"  "0045"  "0060" "0002"  "0016"  "0030"  "0046"  "0061" "0003"  "0017"  "0031"  "0047"  "0062" "0004"  "0018"  "0032"  "0048"  "0063" "0005"  "0019"  "0033"  "0049"  "0064" "0006"  "0020"  "0034"  "0050"  "0065" "0007"  "0021"  "0036"  "0051"  "0066" "0008"  "0022"  "0037"  "0052"  "0067" "0009"  "0023"  "0038"  "0053"  "0068" "0010"  "0024"  "0039"  "0055"  "0069" "0011"  "0025"  "0040"  "0056"  "0070" "0012"  "0026"  "0041"  "0057"  "0072" "0013"  "0027"  "0043"  "0058" "0014"  "0028"  "0044"  "0059" ];
 VIOLA = ["1281"  "1292"  "1304"  "1316"  "1332" "1282"  "1293"  "1305"  "1317"  "1333" "1283"  "1294"  "1306"  "1318"  "1334" "1284"  "1295"  "1307"  "1319"  "1339" "1285"  "1296"  "1308"  "1320"  "1340" "1286"  "1297"  "1309"  "1321"  "1341" "1287"  "1298"  "1311"  "1322"  "1342" "1288"  "1300"  "1312"  "1324"  "1346" "1289"  "1301"  "1313"  "1325"  "1347" "1290"  "1302"  "1314"  "1329" "1291"  "1303"  "1315"  "1331" ];
 
-% 12 flors
-[rows cols]= size(BOTODOR);
-[rows2 cols2]= size(CROCUS);
-[rows3 cols3] = size(BUIXOL);
+% TODO FER DATA AUGMENTATION 
+
+
+% Rand. perm.
+BOTODOR = BOTODOR(randperm(length(BOTODOR)))
+CROCUS = CROCUS(randperm(length(CROCUS)))
+BUIXOL = BUIXOL(randperm(length(BUIXOL)))
+DENTDELLEO = DENTDELLEO(randperm(length(DENTDELLEO)))
+FADRINS = FADRINS(randperm(length(FADRINS)))
+FRITILLARIA = FRITILLARIA(randperm(length(FRITILLARIA)))
+GERBERA = GERBERA(randperm(length(GERBERA)))
+GIRASOL = GIRASOL(randperm(length(GIRASOL)))
+HEMEROCALLIS = HEMEROCALLIS(randperm(length(HEMEROCALLIS)))
+LLIRI = LLIRI(randperm(length(LLIRI)))
+NARCIS = NARCIS(randperm(length(NARCIS)))
+VIOLA = VIOLA(randperm(length(VIOLA)))
+
+
+
+% TAMANYS DE TOTES LES FLORS
+[rows numBOTO]= size(BOTODOR)
+[rows2 numCROCUS]= size(CROCUS)
+[rows3 numBUIXOL] = size(BUIXOL)
+[rows4 numDENT] = size(DENTDELLEO)
+[rows5 numFADRINS] = size(FADRINS)
+[rows6 numFRITLLARIA]= size(FRITILLARIA)
+[rows7 numGERBERA] = size(GERBERA)
+[rows8 numGIRASOL] = size(GIRASOL)
+[rows9 numHEMEROCALLIS] = size(HEMEROCALLIS)
+[rows10 numLLIRI] = size(LLIRI)
+[rows11 numNARCIS] = size(NARCIS)
+[rows12 numVIOLA] = size(VIOLA)
+
+split = 0.8;
+
 
 featureFlowers = [];
 label = []
-for i=  1:cols
+for i=  1:numBOTO*split
     [color, segmented] = getImage(BOTODOR(i));
     featuresaux = getFeatures(color, segmented);
     featureFlowers = [featureFlowers; featuresaux];
-    label = [label;'a'];
+    label = [label;"Boto"];
     i
+    BOTODOR(i)
+    
 end 
 size(featureFlowers)
-for i = 1:cols2
+for i = 1:numCROCUS*split
     [color, segmented] = getImage(CROCUS(i));
     featuresaux = getFeatures(color, segmented);
     featureFlowers = [featureFlowers; featuresaux];
-    label = [label;'b'];
-    i+cols
+    label = [label;"Crocus"];
+    i+numBOTO*split
+    CROCUS(i)
 end
 size(featureFlowers)
-for i = 1:cols3
+for i = 1:numBUIXOL*split
     [color, segmented] = getImage(BUIXOL(i));
     featuresaux = getFeatures(color, segmented);
     featureFlowers = [featureFlowers; featuresaux];
-    label= [label;'c'];
-    i + cols + cols2
+    label= [label;"Buixol"];
+    i + numBOTO*split + numCROCUS*split
+    BUIXOL(i)
 end
-size(featureFlowers)
+for i = 1:numDENT*split
+    [color, segmented] = getImage(DENTDELLEO(i));
+    featuresaux = getFeatures(color, segmented);
+    featureFlowers = [featureFlowers; featuresaux];
+    label= [label;"DentdeLleo"];
+    i + numBOTO*split + numCROCUS*split + numBUIXOL*split
+    DENTDELLEO(i)
+end
+
+for i = 1:numFADRINS*split
+    [color, segmented] = getImage(FADRINS(i));
+    featuresaux = getFeatures(color, segmented);
+    featureFlowers = [featureFlowers; featuresaux];
+    label= [label;"Fadrins"];
+    i + numBOTO*split + numCROCUS*split + numBUIXOL*split + numDENT*split
+end
+
+
+for i = 1:numFRITLLARIA*split
+    [color, segmented] = getImage(FRITILLARIA(i));
+    featuresaux = getFeatures(color, segmented);
+    featureFlowers = [featureFlowers; featuresaux];
+    label= [label;"Fritillaria"];
+    i + numBOTO*split + numCROCUS*split + numBUIXOL*split + numDENT*split + numFADRINS*split
+end
+
+
+for i = 1:numGERBERA*split
+    [color, segmented] = getImage(GERBERA(i));
+    featuresaux = getFeatures(color, segmented);
+    featureFlowers = [featureFlowers; featuresaux];
+    label= [label;"Gerbera"];
+    i + numBOTO*split + numCROCUS*split + numBUIXOL*split + numDENT*split + numFADRINS*split + numFRITLLARIA*split
+end
+
+for i = 1:numGIRASOL*split
+    [color, segmented] = getImage(GIRASOL(i));
+    featuresaux = getFeatures(color, segmented);
+    featureFlowers = [featureFlowers; featuresaux];
+    label= [label;"Girasol"];
+    i + numBOTO*split + numCROCUS*split + numBUIXOL*split + numDENT*split + numFADRINS*split + numFRITLLARIA*split + numGERBERA*split
+end
+
+
+for i = 1:numHEMEROCALLIS*split
+    [color, segmented] = getImage(HEMEROCALLIS(i));
+    featuresaux = getFeatures(color, segmented);
+    featureFlowers = [featureFlowers; featuresaux];
+    label= [label;"Hemerocallis"];
+    i + numBOTO*split + numCROCUS*split + numBUIXOL*split + numDENT*split + numFADRINS*split + numFRITLLARIA*split + numGERBERA*split + numGIRASOL*split
+end
+
+for i = 1:numLLIRI*split
+    [color, segmented] = getImage(LLIRI(i));
+    featuresaux = getFeatures(color, segmented);
+    featureFlowers = [featureFlowers; featuresaux];
+    label= [label;"Lliri"];
+    i + numBOTO*split + numCROCUS*split + numBUIXOL*split + numDENT*split + numFADRINS*split + numFRITLLARIA*split + numGERBERA*split + numGIRASOL*split + numHEMEROCALLIS*split
+end
+
+for i = 1:numNARCIS*split
+    [color, segmented] = getImage(NARCIS(i));
+    featuresaux = getFeatures(color, segmented);
+    featureFlowers = [featureFlowers; featuresaux];
+    label= [label;"Narcis"];
+    i + numBOTO*split + numCROCUS*split + numBUIXOL*split + numDENT*split + numFADRINS*split + numFRITLLARIA*split + numGERBERA*split + numGIRASOL*split + numHEMEROCALLIS*split + numLLIRI*split
+end
+
+for i = 1:numVIOLA*split
+    [color, segmented] = getImage(VIOLA(i));
+    featuresaux = getFeatures(color, segmented);
+    featureFlowers = [featureFlowers; featuresaux];
+    label= [label;"Viola"];
+    i + numBOTO*split + numCROCUS*split + numBUIXOL*split + numDENT*split + numFADRINS*split + numFRITLLARIA*split + numGERBERA*split + numGIRASOL*split + numHEMEROCALLIS*split + numLLIRI*split + numNARCIS*split
+end
 
 % LETS SEE THE FEATURES
 % NUMBER OF PETALS AND COMPACTNESS
 
 % X = featureFlowers(:,3:4);
 % labels = labelVector;
-% gscatter(x(:,1),x(:,2), labelVector, 'rgb')
-% xlabel('Number of petals')
-% ylabel('Compactness')
+% gscatter(x(:,1),x(:,2), labelVector, "rgb")
+% xlabel("Number of petals")
+% ylabel("Compactness")
 
 
-classifier = fitctree(featureFlowers, label,'Prune','on','Surrogate','all','MinLeafSize',4);
-view(classifier,'Mode','graph')
+classifier = fitctree(featureFlowers, label,"Prune","on","Surrogate","all","MinLeafSize",4);
+view(classifier,"Mode","graph")
 
 
 
@@ -70,70 +179,70 @@ view(classifier,'Mode','graph')
 
 
 % 12 flors
-% [color, segmented] = getImage('1121');
+% [color, segmented] = getImage("1121");
 % featuresBotodOr1 = getFeatures(color, segmented);
-% [color, segmented] = getImage('1122');
+% [color, segmented] = getImage("1122");
 % featuresBotodOr2 = getFeatures(color, segmented);
-% [color, segmented] = getImage('1123');
+% [color, segmented] = getImage("1123");
 % featuresBotodOr3 = getFeatures(color, segmented);
-% [color, segmented] = getImage('1124');
+% [color, segmented] = getImage("1124");
 % featuresBotodOr4 = getFeatures(color, segmented);
-% [color, segmented] = getImage('1125');
+% [color, segmented] = getImage("1125");
 % featuresBotodOr5 = getFeatures(color, segmented);
-% [color, segmented] = getImage('1126');
+% [color, segmented] = getImage("1126");
 % featuresBotodOr6 = getFeatures(color, segmented);
-% [color, segmented] = getImage('1127');
+% [color, segmented] = getImage("1127");
 % featuresBotodOr7 = getFeatures(color, segmented);
-% [color, segmented] = getImage('1128');
+% [color, segmented] = getImage("1128");
 % featuresBotodOr8 = getFeatures(color, segmented);
-% [color, segmented] = getImage('1129');
+% [color, segmented] = getImage("1129");
 % featuresBotodOr9 = getFeatures(color, segmented);
-% [color, segmented] = getImage('1130');
+% [color, segmented] = getImage("1130");
 % featuresBotodOr10 = getFeatures(color, segmented);
 % 
 % 
-% [color, segmented] = getImage('1201');
+% [color, segmented] = getImage("1201");
 % featuresBuixol1 = getFeatures(color, segmented);
-% [color, segmented] = getImage('1202');
+% [color, segmented] = getImage("1202");
 % featuresBuixol2 = getFeatures(color, segmented);
-% [color, segmented] = getImage('1203');
+% [color, segmented] = getImage("1203");
 % featuresBuixol3 = getFeatures(color, segmented);
-% [color, segmented] = getImage('1204');
+% [color, segmented] = getImage("1204");
 % featuresBuixol4 = getFeatures(color, segmented);
-% [color, segmented] = getImage('1205');
+% [color, segmented] = getImage("1205");
 % featuresBuixol5 = getFeatures(color, segmented);
-% [color, segmented] = getImage('1206');
+% [color, segmented] = getImage("1206");
 % featuresBuixol6 = getFeatures(color, segmented);
-% [color, segmented] = getImage('1207');
+% [color, segmented] = getImage("1207");
 % featuresBuixol7 = getFeatures(color, segmented);
-% [color, segmented] = getImage('1208');
+% [color, segmented] = getImage("1208");
 % featuresBuixol8 = getFeatures(color, segmented);
-% [color, segmented] = getImage('1209');
+% [color, segmented] = getImage("1209");
 % featuresBuixol9 = getFeatures(color, segmented);
-% [color, segmented] = getImage('1210');
+% [color, segmented] = getImage("1210");
 % featuresBuixol10 = getFeatures(color, segmented);
 % 
 % 
 % 
-% [color, segmented] = getImage('0322');
+% [color, segmented] = getImage("0322");
 % featuresCrocus1 = getFeatures(color, segmented);
-% [color, segmented] = getImage('0323');
+% [color, segmented] = getImage("0323");
 % featuresCrocus2 = getFeatures(color, segmented);
-% [color, segmented] = getImage('0324');
+% [color, segmented] = getImage("0324");
 % featuresCrocus3 = getFeatures(color, segmented);
-% [color, segmented] = getImage('0325');
+% [color, segmented] = getImage("0325");
 % featuresCrocus4 = getFeatures(color, segmented);
-% [color, segmented] = getImage('0326');
+% [color, segmented] = getImage("0326");
 % featuresCrocus5 = getFeatures(color, segmented);
-% [color, segmented] = getImage('0327');
+% [color, segmented] = getImage("0327");
 % featuresCrocus6 = getFeatures(color, segmented);
-% [color, segmented] = getImage('0328');
+% [color, segmented] = getImage("0328");
 % featuresCrocus7 = getFeatures(color, segmented);
-% [color, segmented] = getImage('0329');
+% [color, segmented] = getImage("0329");
 % featuresCrocus8 = getFeatures(color, segmented);
-% [color, segmented] = getImage('0377');
+% [color, segmented] = getImage("0377");
 % featuresCrocus9 = getFeatures(color, segmented);
-% [color, segmented] = getImage('0366');
+% [color, segmented] = getImage("0366");
 % featuresCrocus10 = getFeatures(color, segmented);
 % 
 % 
@@ -177,38 +286,38 @@ view(classifier,'Mode','graph')
 %                    featuresCrocus10
 %                    ];
 %                
-% labelVector = [{'a'};
-%                {'a'};
-%                {'a'};
-%                {'a'};
-%                {'a'};
-%                {'a'};
-%                {'a'};
-%                {'a'};
-%                {'a'};
-%                {'a'};
+% labelVector = [{"a"};
+%                {"a"};
+%                {"a"};
+%                {"a"};
+%                {"a"};
+%                {"a"};
+%                {"a"};
+%                {"a"};
+%                {"a"};
+%                {"a"};
 %                
-%                {'b'};
-%                {'b'};
-%                {'b'};
-%                {'b'};
-%                {'b'};
-%                {'b'};
-%                {'b'};
-%                {'b'};
-%                {'b'};
-%                {'b'};
+%                {"b"};
+%                {"b"};
+%                {"b"};
+%                {"b"};
+%                {"b"};
+%                {"b"};
+%                {"b"};
+%                {"b"};
+%                {"b"};
+%                {"b"};
 %                
-%                {'c'};
-%                {'c'};
-%                {'c'};
-%                {'c'};
-%                {'c'};
-%                {'c'};
-%                {'c'};
-%                {'c'};
-%                {'c'};
-%                {'c'}
+%                {"c"};
+%                {"c"};
+%                {"c"};
+%                {"c"};
+%                {"c"};
+%                {"c"};
+%                {"c"};
+%                {"c"};
+%                {"c"};
+%                {"c"}
 %               ];
 % 
 % 
@@ -230,31 +339,31 @@ view(classifier,'Mode','graph')
 
 
 
-% [color, segmented] = getImage('0961');
+% [color, segmented] = getImage("0961");
 % featuresDentdeLleo = getFeatures(color, segmented);
 % 
-% [color, segmented] = getImage('0081');
+% [color, segmented] = getImage("0081");
 % featuresFadrins = getFeatures(color, segmented);
 % 
-% [color, segmented] = getImage('0641');
+% [color, segmented] = getImage("0641");
 % featuresFritillaria = getFeatures(color, segmented);
 % 
-% [color, segmented] = getImage('0801');
+% [color, segmented] = getImage("0801");
 % featuresGerbera = getFeatures(color, segmented);
 % 
-% [color, segmented] = getImage('0721');
+% [color, segmented] = getImage("0721");
 % featuresGirasol = getFeatures(color, segmented);
 % 
-% [color, segmented] = getImage('0481');
+% [color, segmented] = getImage("0481");
 % featuresHemerocallis = getFeatures(color, segmented);
 % 
-% [color, segmented] = getImage('0401');
+% [color, segmented] = getImage("0401");
 % featuresLliri = getFeatures(color, segmented);
 % 
-% [color, segmented] = getImage('0001');
+% [color, segmented] = getImage("0001");
 % featuresNarcis = getFeatures(color, segmented);
 % 
-% [color, segmented] = getImage('1281');
+% [color, segmented] = getImage("1281");
 % featuresViola = getFeatures(color, segmented);
 % 
 % 
@@ -272,18 +381,18 @@ view(classifier,'Mode','graph')
 %                    featuresViola
 %                    ];
 %                
-% labelVector = {'BotodOr';
-%                'Buixol';
-%                'Crocus';
-%                'DentdeLleo';
-%                'Fadrins';
-%                'Fritillaria';
-%                'Gerbera';
-%                'Girasol';
-%                'Hemerocallis';
-%                'Lliri';
-%                'Narcis';
-%                'Viola'};
+% labelVector = {"BotodOr";
+%                "Buixol";
+%                "Crocus";
+%                "DentdeLleo";
+%                "Fadrins";
+%                "Fritillaria";
+%                "Gerbera";
+%                "Girasol";
+%                "Hemerocallis";
+%                "Lliri";
+%                "Narcis";
+%                "Viola"};
 % 
 % classifier = fitctree(featuresFlowers, labelVector);
 
