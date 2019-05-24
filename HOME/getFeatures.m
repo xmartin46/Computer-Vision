@@ -1,5 +1,5 @@
 function [features] = getFeatures(color, segmented)
-    % Treure la il·luminació
+    % Treure la ilï¿½luminaciï¿½
     rgb = NormalitzaRGB(color);
     gris = rgb(:, :, 1)/3 + rgb(:, :, 2)/3 + rgb(:, :, 3)/3;
     norm = cat(3, gris, gris, gris);
@@ -18,9 +18,15 @@ function [features] = getFeatures(color, segmented)
     % Fourier
     fourier = getForma(segmented, 5);
     fourier = reshape(fourier.',1,[]);
-    % Relació BoundingBox amb Centroid
+    % Relaciï¿½ BoundingBox amb Centroid
     [x, y] = boundingBox(segmented);
     
-    features = cat(2, h1);
+    % Light a and b color dimensions
+    lab = rgb2lab(color);
+    lab1 = reshape(lab(:,:,1), 1,[]);
+    lab2 = reshape(lab(:,:,2),1,[]);
+    lab3 = reshape(lab(:,:,3),1,[]);
+    
+    features = cat(2, petals, C, h1); %lab1,lab2,lab3);
 end
 
