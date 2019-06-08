@@ -118,15 +118,58 @@ Available at the \textit{Matlab Computer Vision Toolbox}
 
 
 \section{Data augmentation}
-In order \textbf{to strenghten our descriptors} we have also used the following public repository:  \textit{Albumentation: fast image augmentation library and easy to use wrapper around other libraries}(see AFEGIR NUM in References for more), which proporcionates facilities to augment the dataset including several transformations like: flipping, blurrring, RGB Shifting, Random contrast, Random brightness, etc...
+In order \textbf{to strenghten our descriptors} we have also used the following public repository:  \textit{Albumentation: fast image augmentation library and easy to use wrapper around other libraries}(see more in References), which proporcionates facilities to augment the dataset including several transformations like: flipping, blurrring, RGB Shifting, Random contrast, Random brightness, etc...
 \medskip
 
-To decide which transformations we wanted to apply, we looked first to our descriptors and the importance of each feature. For example, we discarted the Channel Shuffle because we believe that the color is very important for our implementation. Then, based on trial and error, we picked some of them which gave us an overall better result. Finally we are using:
+To decide which transformations we wanted to apply, we looked first to our descriptors and the importance of each feature. For example, we discarted the Channel Shuffle because we believe that the color is very important for our implementation. Then, based on trial and error, we picked some of them which gave us an overall better result. Finally we are using random variations of:
 \begin{itemize}
-    \item polla
-    \item polla
-    \item polla
+    \item Brightness and Contrast
+    \item Blur
+    \item Rotations
+    \item Flips
 \end{itemize}
+For example let's suppose that we are working with this \textit{Boto d'Or} image:
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.2]{images/original.jpg}
+    \caption{Original picture}
+    \label{original}
+\end{figure}
+
+The script we have implemented would apply the following transformations: 
+
+\begin{figure}[H]
+    \begin{subfigure}[t]{0.45\textwidth}
+    \centering
+  \includegraphics[scale=0.2]{images/blur.jpg}
+    \caption{Blur transformation}
+    \label{blur}
+    \end{subfigure}
+    \begin{subfigure}[t]{0.45\textwidth}
+    \centering
+    \includegraphics[scale=0.2]{images/horizontal.jpg}
+    \caption{Horizontal Flip transformation}
+    \label{horizontalflip}
+    \end{subfigure}
+\end{figure}
+
+\begin{figure}[H]
+    \begin{subfigure}[t]{0.45\textwidth}
+    \centering
+  \includegraphics[scale=0.2]{images/brightness.jpg}
+    \caption{Brightness and Contrast transformation}
+    \label{brightness}
+    \end{subfigure}
+    \begin{subfigure}[t]{0.45\textwidth}
+    \centering
+    \includegraphics[scale=0.2]{images/scale.jpg}
+    \caption{Scale transformation}
+    \label{scale}
+    \end{subfigure}
+\end{figure}
+
+
+
 
 \newpage
 \begin{thebibliography}{100}
