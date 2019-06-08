@@ -97,20 +97,57 @@ This two flowers, for example, should have really different values for this desc
 The way our descriptor is implemented is the following: we get the first and last pixels of X and Y axis in order to create the \textbf{bounding box}, then using regions props we get the \textbf{centroid of the flower} and finally we calculate the \textbf{relative position} of the centroid over the bounding box. 
 \medskip
 
-In this example using \textit{TBD} we get as a result X Y: 
-
 \begin{figure}[H]
 	\centering
-	\includegraphics[scale=0.45]{images/DUNNO}
-	\caption{Centroid and bounding box output of a \textit{TBD}}
-	\label{centroidTBD}
+	\includegraphics[scale=0.35]{images/centroid.jpg}
+	\caption{Example of centroid and bounding box}
+	\label{centroidNarcis}
 \end{figure}
 
 
-
-\subsection{Hoggs form: Orientation}
-Available at the \textit{Matlab Computer Vision Toolbox}
 \subsection{Fourier descriptor: Shape}
+It is known that we can use the Fourier transform to analyse and characterize the shape of a boundary. Since there are some flowers like the \textit{Hemerocallis} or the \textit{Girasol} that have a very specific shape; we believe that the Shape can be a great descriptor. 
+
+\begin{figure}[H]
+    \begin{subfigure}[t]{0.45\textwidth}
+    \centering
+  \includegraphics[scale=0.25]{images/originalfourier.jpg}
+    \caption{Original}
+    \label{originalfourier}
+    \end{subfigure}
+    \begin{subfigure}[t]{0.45\textwidth}
+    \centering
+    \includegraphics[scale=0.25]{images/shape.jpg}
+    \caption{Shape}
+    \label{fourier2}
+    \end{subfigure}
+    \label{fourier}
+    \caption{Fourier descriptors}
+\end{figure}
+
+
+\subsection{Hogs form: Orientation}
+Previously we have introduced a way to describe information about the shape. However, there are another ways to describe shapes. 
+\\
+As we wanted to have as proper features as possible, we have also implemented HOGs (histogram of oriented gradients), which basically describes the shapes as the distribution of intensity gradient and edge directions. To do it, we have used the utilities available at the \textit{Matlab Computer Vision Toolbox}.
+
+\begin{figure}[H]
+    \begin{subfigure}[t]{0.45\textwidth}
+    \centering
+  \includegraphics[scale=0.234]{images/originalhogg.jpg}
+    \caption{Original}
+    \label{originalhogg}
+    \end{subfigure}
+    \begin{subfigure}[t]{0.45\textwidth}
+    \centering
+    \includegraphics[scale=0.345]{images/hogg.jpg}
+    \caption{Hog features}
+    \label{hogg2}
+    \end{subfigure}
+    \label{hogg}
+    \caption{HOG descriptors}
+\end{figure}
+
 
 
 \section{Classifier}
@@ -131,7 +168,7 @@ To decide which transformations we wanted to apply, we looked first to our descr
 For example let's suppose that we are working with this \textit{Boto d'Or} image:
 \begin{figure}[H]
     \centering
-    \includegraphics[scale=0.2]{images/original.jpg}
+    \includegraphics[scale=0.25]{images/original.jpg}
     \caption{Original picture}
     \label{original}
 \end{figure}
@@ -141,13 +178,13 @@ The script we have implemented would apply the following transformations:
 \begin{figure}[H]
     \begin{subfigure}[t]{0.45\textwidth}
     \centering
-  \includegraphics[scale=0.2]{images/blur.jpg}
+  \includegraphics[scale=0.25]{images/blur.jpg}
     \caption{Blur transformation}
     \label{blur}
     \end{subfigure}
     \begin{subfigure}[t]{0.45\textwidth}
     \centering
-    \includegraphics[scale=0.2]{images/horizontal.jpg}
+    \includegraphics[scale=0.25]{images/horizontal.jpg}
     \caption{Horizontal Flip transformation}
     \label{horizontalflip}
     \end{subfigure}
@@ -156,16 +193,18 @@ The script we have implemented would apply the following transformations:
 \begin{figure}[H]
     \begin{subfigure}[t]{0.45\textwidth}
     \centering
-  \includegraphics[scale=0.2]{images/brightness.jpg}
+  \includegraphics[scale=0.25]{images/brightness.jpg}
     \caption{Brightness and Contrast transformation}
     \label{brightness}
     \end{subfigure}
     \begin{subfigure}[t]{0.45\textwidth}
     \centering
-    \includegraphics[scale=0.2]{images/scale.jpg}
+    \includegraphics[scale=0.31]{images/scale.jpg}
     \caption{Scale transformation}
     \label{scale}
     \end{subfigure}
+    \label{transformations}
+    \caption{Data augmentation transformations}
 \end{figure}
 
 
