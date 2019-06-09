@@ -5,7 +5,7 @@ import shutil
 import imageio
 from PIL import Image
 from matplotlib import pyplot as plt
-from albumentations import (HorizontalFlip, RandomCrop, ShiftScaleRotate,Crop,  RandomScale, RandomRotate90, Transpose, Blur, MedianBlur, GaussNoise, Flip, RandomBrightnessContrast, IAASharpen, Compose)
+from albumentations import (HorizontalFlip, RandomCrop, ShiftScaleRotate,Crop, CenterCrop,  RandomScale, RandomRotate90, Transpose, Blur, MedianBlur, GaussNoise, Flip, RandomBrightnessContrast, IAASharpen, Compose)
 
 
 def applyAugmentation(aug,image):
@@ -27,6 +27,7 @@ for root, dirs, files in os.walk("./Segmentades",topdown=False):
             #aug = RandomBrightnessContrast(0.8)
             #aug = RandomScale(scale_limit=1,p=1)
             #aug = RandomCrop(height = 400, width = 400, always_apply=True)
+            #aug = CenterCrop(height = 350, width = 350, always_apply = True)
             image = applyAugmentation(aug,data)
             #aug = IAASharpen()
             #image = applyAugmentation(aug,image)
@@ -38,7 +39,7 @@ for root, dirs, files in os.walk("./Segmentades",topdown=False):
            #     shutil.rmtree(os.path.join(root,'Augmentation')) 
             nom = os.path.join(root,'Augmentation',name)
             nom = nom[:-4]
-            nom = nom + "_horizontal.jpg"
+            nom = nom + "_scale.jpg"
             #print(nom)
             im.save(nom)
             
@@ -53,7 +54,7 @@ for root, dirs, files in os.walk("./Segmentades",topdown=False):
             
                 nom = os.path.join(root,'Augmentation',segmented)
                 nom = nom[:-4]
-                nom = nom + "_horizontal.png"
+                nom = nom + "_scale.png"
                 #print(nom)
                 imageio.imwrite(nom, img[:,:,:])
             except:
