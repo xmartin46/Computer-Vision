@@ -2,10 +2,11 @@ function [ret] = getForma(imageSegmented, N)
     segmented = imageSegmented;
     segmented(segmented == 0) = 255;
     segmented(segmented == 1) = 255;
-
+%      segmented = imfill(segmented,'holes');
+    
     ee = strel('disk', 1);
     dil = imdilate(segmented, ee);
-    new = imsubtract(double(dil), double(segmented));
+    new = imsubtract(dil, segmented);
 
     [fila, col] = find(new, 1);
     B = bwtraceboundary(new, [fila, col], 'E');
@@ -16,11 +17,10 @@ function [ret] = getForma(imageSegmented, N)
     s = Bc(:, 1) + i * Bc(:, 2);
     s(end+1) = s(end);
     z = fft(s);
-
-    tmp = z;
-    tmp(N+1:end-N) = 0;
-    
-    ret = cat(2, real(tmp(1:N)), real(tmp(end-N+1:end)));
+%     tmp = z;
+%     tmp(N+1:end-N) = 0;
+    [rows, cols] = size(z);
+    ret = cat(2, real(z(1:N)), real(z(end-N+1:end)));
     
 %     s2 = ifft(tmp);
 %     files = round(real(s2) + cdm(1));
