@@ -1,5 +1,6 @@
 clear all
 close all
+clc
 % TOTES LES IMATGES PNG 
 % ARA MATEIX CUTRE I KNOW
 BOTODOR = ["1121"  "1132"  "1143"  "1154"  "1168" "1122"  "1133"  "1144"  "1155"  "1170" "1123"  "1134"  "1145"  "1156"  "1173" "1124"  "1135"  "1146"  "1157"  "1174" "1125"  "1136"  "1147"  "1158"  "1177" "1126"  "1137"  "1148"  "1159"  "1185" "1127"  "1138"  "1149"  "1160"  "1187" "1128"  "1139"  "1150"  "1161" "1129"  "1140"  "1151"  "1162" "1130"  "1141"  "1152"  "1164" "1131"  "1142"  "1153"  "1166"];
@@ -169,10 +170,27 @@ end
 
 
 classifier = fitctree(featureFlowers, label,"Prune","on","Surrogate","all","MinLeafSize",4);
-view(classifier,"Mode","graph")
+% view(classifier,"Mode","graph")
 
+% classifier = TreeBagger(50,featureFlowers,label,'OOBPrediction','On',...
+%                                                 'Method','classification')
 
+% classifier = fitcdiscr(featureFlowers,label,'OptimizeHyperparameters','auto',...
+%     'HyperparameterOptimizationOptions',...
+%     struct('AcquisitionFunctionName','expected-improvement-plus'))
 
+% classifier = fitcensemble(featureFlowers,label) maaaaaaaaaaaaaaaaaaaaaaan
+% classifier = fitcensemble(featureFlowers,label, 'Method', 'Bag') IM GONNA
+% CUM 85%
+% classifier = fitcensemble(featureFlowers,label, 'Method', 'LPBoost') 79%
+% classifier = fitcensemble(featureFlowers,label, 'Method', 'RUSBoost')
+% Buuuh 64%
+% classifier = fitcensemble(featureFlowers,label, 'Method', 'Subspace') 29%
+% classifier = fitcensemble(featureFlowers,label, 'Method', 'TotalBoost')
+% 75%
+
+% classifier =
+% fitcknn(featureFlowers,label,'NumNeighbors',5,'Standardize',1) 59%
 
 
 
