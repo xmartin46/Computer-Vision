@@ -57,18 +57,19 @@ $$C= \frac{(P^2 / Area)} {4*\pi}$$
  To get the area we have used Matlab's \textbf{regionprops} utility, and to get the perimeter we have made \textbf{an erosion and a substraction}. 
  \medskip 
  
- \noindent In this example, we compare a \textit{} and a \textit{}.
+ \noindent In this example, we compare a \textit{Hemerocallis} and a \textit{Botó d'Or}. Since the measure takes a minimum value of 1 for a circle and objects which have an elliptical shape, or boundary that is irregular rather than smooth, will have larger compactness. We should have smaller values for the \textit{Botó d'Or}.
+ 
  \begin{figure}[H]
     \begin{subfigure}[t]{.49\linewidth}
     \centering
-  \includegraphics[scale=0.25]{images/compactness1.jpg}
-  \caption{Compactness: \textbf{ }}
+  \includegraphics[scale=0.23]{images/compactness1.jpg}
+  \caption{Compactness: \textbf{28.10}}
   \label{original}
     \end{subfigure}
     \begin{subfigure}[t]{.49\linewidth}
     \centering
-    \includegraphics[scale=0.2]{images/compactness2.jpg}
-    \caption{Compactness: \textbf{ }}
+    \includegraphics[scale=0.28]{images/compactness2.jpg}
+    \caption{Compactness: \textbf{0.78}}
     \label{skez}
     \end{subfigure}
     \caption{Comparison of compactness}
@@ -238,7 +239,7 @@ Some of the flowers that can be seen in our \textit{zero} flower dataset are:
     \begin{subfigure}[t]{0.45\textwidth}
     \centering
     \includegraphics[scale=0.20]{images/tulip.jpg}
-    \caption{tulip}
+    \caption{Tulip}
     \label{tulip}
     \end{subfigure}
     \label{zero}
@@ -322,17 +323,19 @@ The script we have implemented would apply the following transformations:
 \bibitem{Image Segmentation}
 \textit{Image Segmentation with MATLAB} [online]. Available at : https://www.mathworks.com/discovery/image-segmentation.html [Accessed 28 May 2019]
 
-
 \bibitem{Flower dataset}
-Nilsback, M-E. and Zisserman, A. (2008) \textit{Automated Flower Classification over a Large Number of Classes} [online] Available at:http://www.robots.ox.ac.uk/~vgg/publications/papers/nilsback08.pdf [Accessed 24 May 2019]
+Nilsback, M-E. and Zisserman, A. (2008) \textit{Automated Flower Classification over a Large Number of Classes} [online] Available at:http://www.robots.ox.ac.uk/~vgg/publications/papers/nilsback08.pdf [Accessed 26 May 2019]
 
+
+\bibitem{Shape Analysis & Measurement}
+M.A. Wirth.(2004) \textit{Shape Analysis \& Measurement} [online] Available at: http://www.cyto.purdue.edu/cdroms/micro2/content/education/wirth10.pdf [Accessed 24 May 2019].
 
 \bibitem{Albumentations}
-    A. Buslaev (2018). Based on \textit{Albumentations: fast and flexible image augmentations} [online]. Paper available at:https://arxiv.org/abs/1809.06839. Code available at: https://github.com/albu/albumentations  [Accessed 3 June 2019].
+    Buslaev A.(2018). Based on \textit{Albumentations: fast and flexible image augmentations} [online]. Paper available at:https://arxiv.org/abs/1809.06839. Code available at: https://github.com/albu/albumentations  [Accessed 3 June 2019].
 
 
 \bibitem{Google images download}
-    H. Vasa (2019). \textit{Python Script to download hundreds of images from 'Google Images'.} [online] Code available at: https://github.com/hardikvasa/google-images-download [Accessed 4 June 2019].
+    Vasa H. (2019). \textit{Python Script to download hundreds of images from 'Google Images'.} [online] Code available at: https://github.com/hardikvasa/google-images-download [Accessed 4 June 2019].
 
 
 
