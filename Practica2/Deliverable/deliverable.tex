@@ -14,8 +14,9 @@
 \begin{document}
 \maketitle
 \vspace*{\fill}
+\begin{center}
 \includegraphics[scale=0.4]{UPClogo.png}\par\vspace{1cm}
-
+\end{center}
 \newpage
 \tableofcontents
 \newpage 
@@ -76,24 +77,19 @@ $$C= \frac{(P^2 / Area)} {4*\pi}$$
 \end{figure}
 
 
-\subsection{Color Histogram}
+\subsection{Color}
+Most of the flowers, show always the same one or two colors. So the color is really important in order to distinguish an specie from another. To do it we have used  the Mathworks utiliy: \textbf{image2palette which uses k-means color clustering}. We executed the k-means with 4 clusters (one is for the black which is always present) to get the most important colors; moreover, we have also the information of the presence percentage of each color.
+\medskip
+
+This is an example with a \textit{Viola} picture:
+ 
+ \medskip
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[scale=0.35]{images/colorHistogram1}
-	\caption{Prova1.}
-\end{figure}
-
-\begin{figure}[H]
-	\centering
-	\includegraphics[scale=0.35]{images/colorHistogram2}
-	\caption{Prova2.}
-\end{figure}
-
-\begin{figure}[H]
-	\centering
-	\includegraphics[scale=0.35]{images/colorHistogram3}
-	\caption{Prova3.}
+	\includegraphics[scale=0.85]{images/colorOriginal.png}
+	\caption{Example of our color feature extraction}
+	\label{color}
 \end{figure}
 
 \subsection{Number of petals}
@@ -305,14 +301,15 @@ The script we have implemented would apply the following transformations:
 
 
 
-\section{List of functions and libraries that have been used}
+\section{List of functions and libraries that have used}
 \begin{itemize}
 \item \textbf{Bounding Box}: function that finds the relative position of the centroid from the bounding box. It uses the matlab utility \textbf{regionprops} to get the centroid.
 \item \textbf{getCompactness}: function that calculates the compactness of a flower. It uses the matlab utility \textbf{regionprops} to get the area. To get the perimeter we have made an erosion and then a substraction. 
 \item \textbf{getForma}: function that gets the shape Fourier descriptor. 
 \item \textbf{getHog}: function that gets the HOG features. It uses the \textbf{Matlab Computer Vision Toolbox} utility \textbf{extractHOGFeatures}.
 \item \textbf{getNumberPetals}: function that gets the number of petals using the skeleton. It uses the matlab utility \textbf{bwmorph} for the skeletonization. 
-\item \textbf{histo3d}: function that gets the color information.
+\item \textbf{NAMEOFTHEFUNCTION}: function that gets the 3 main colors of the image using k-means and its presence percentage. It uses the \textbf{Mathwork: image2palette} utility which clusters pixels colors using k-means to make a palette.
+%\item \textbf{histo3d}: function that gets the color information.
 \item \textbf{Albumentations library}: for data augmentation issues.
 \item \textbf{Google images download library}: to download several pictures of the \textit{zero} class.
 \end{itemize}
