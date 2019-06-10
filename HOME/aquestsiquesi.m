@@ -51,7 +51,7 @@ VIOLA = VIOLA(randperm(length(VIOLA)))
 [rows11 numNARCIS] = size(NARCIS)
 [rows12 numVIOLA] = size(VIOLA)
 
-split = 0.8;
+split = 1;
 
 
 featureFlowers = [];
@@ -60,7 +60,7 @@ for i=  1:numBOTO*split
     [color, segmented] = getImage(BOTODOR(i));
     featuresaux = getFeatures(color, segmented);
     featureFlowers = [featureFlowers; featuresaux];
-    label = [label;"Boto"];
+    label = [label;0];
     i
     BOTODOR(i)
     
@@ -70,7 +70,7 @@ for i = 1:numCROCUS*split
     [color, segmented] = getImage(CROCUS(i));
     featuresaux = getFeatures(color, segmented);
     featureFlowers = [featureFlowers; featuresaux];
-    label = [label;"Crocus"];
+    label = [label;1];
     i+numBOTO*split
     CROCUS(i)
 end
@@ -79,7 +79,7 @@ for i = 1:numBUIXOL*split
     [color, segmented] = getImage(BUIXOL(i));
     featuresaux = getFeatures(color, segmented);
     featureFlowers = [featureFlowers; featuresaux];
-    label= [label;"Buixol"];
+    label= [label;2];
     i + numBOTO*split + numCROCUS*split
     BUIXOL(i)
 end
@@ -87,7 +87,7 @@ for i = 1:numDENT*split
     [color, segmented] = getImage(DENTDELLEO(i));
     featuresaux = getFeatures(color, segmented);
     featureFlowers = [featureFlowers; featuresaux];
-    label= [label;"DentdeLleo"];
+    label= [label;3];
     i + numBOTO*split + numCROCUS*split + numBUIXOL*split
     DENTDELLEO(i)
 end
@@ -96,7 +96,7 @@ for i = 1:numFADRINS*split
     [color, segmented] = getImage(FADRINS(i));
     featuresaux = getFeatures(color, segmented);
     featureFlowers = [featureFlowers; featuresaux];
-    label= [label;"Fadrins"];
+    label= [label;4];
     i + numBOTO*split + numCROCUS*split + numBUIXOL*split + numDENT*split
 end
 
@@ -105,7 +105,7 @@ for i = 1:numFRITLLARIA*split
     [color, segmented] = getImage(FRITILLARIA(i));
     featuresaux = getFeatures(color, segmented);
     featureFlowers = [featureFlowers; featuresaux];
-    label= [label;"Fritillaria"];
+    label= [label;5];
     i + numBOTO*split + numCROCUS*split + numBUIXOL*split + numDENT*split + numFADRINS*split
 end
 
@@ -114,7 +114,7 @@ for i = 1:numGERBERA*split
     [color, segmented] = getImage(GERBERA(i));
     featuresaux = getFeatures(color, segmented);
     featureFlowers = [featureFlowers; featuresaux];
-    label= [label;"Gerbera"];
+    label= [label;6];
     i + numBOTO*split + numCROCUS*split + numBUIXOL*split + numDENT*split + numFADRINS*split + numFRITLLARIA*split
 end
 
@@ -122,7 +122,7 @@ for i = 1:numGIRASOL*split
     [color, segmented] = getImage(GIRASOL(i));
     featuresaux = getFeatures(color, segmented);
     featureFlowers = [featureFlowers; featuresaux];
-    label= [label;"Girasol"];
+    label= [label;7];
     i + numBOTO*split + numCROCUS*split + numBUIXOL*split + numDENT*split + numFADRINS*split + numFRITLLARIA*split + numGERBERA*split
 end
 
@@ -131,7 +131,7 @@ for i = 1:numHEMEROCALLIS*split
     [color, segmented] = getImage(HEMEROCALLIS(i));
     featuresaux = getFeatures(color, segmented);
     featureFlowers = [featureFlowers; featuresaux];
-    label= [label;"Hemerocallis"];
+    label= [label;8];
     i + numBOTO*split + numCROCUS*split + numBUIXOL*split + numDENT*split + numFADRINS*split + numFRITLLARIA*split + numGERBERA*split + numGIRASOL*split
 end
 
@@ -139,7 +139,7 @@ for i = 1:numLLIRI*split
     [color, segmented] = getImage(LLIRI(i));
     featuresaux = getFeatures(color, segmented);
     featureFlowers = [featureFlowers; featuresaux];
-    label= [label;"Lliri"];
+    label= [label;9];
     i + numBOTO*split + numCROCUS*split + numBUIXOL*split + numDENT*split + numFADRINS*split + numFRITLLARIA*split + numGERBERA*split + numGIRASOL*split + numHEMEROCALLIS*split
 end
 
@@ -147,7 +147,7 @@ for i = 1:numNARCIS*split
     [color, segmented] = getImage(NARCIS(i));
     featuresaux = getFeatures(color, segmented);
     featureFlowers = [featureFlowers; featuresaux];
-    label= [label;"Narcis"];
+    label= [label;10];
     i + numBOTO*split + numCROCUS*split + numBUIXOL*split + numDENT*split + numFADRINS*split + numFRITLLARIA*split + numGERBERA*split + numGIRASOL*split + numHEMEROCALLIS*split + numLLIRI*split
 end
 
@@ -155,7 +155,7 @@ for i = 1:numVIOLA*split
     [color, segmented] = getImage(VIOLA(i));
     featuresaux = getFeatures(color, segmented);
     featureFlowers = [featureFlowers; featuresaux];
-    label= [label;"Viola"];
+    label= [label;11];
     i + numBOTO*split + numCROCUS*split + numBUIXOL*split + numDENT*split + numFADRINS*split + numFRITLLARIA*split + numGERBERA*split + numGIRASOL*split + numHEMEROCALLIS*split + numLLIRI*split + numNARCIS*split
 end
 
@@ -180,17 +180,13 @@ classifier = fitctree(featureFlowers, label,"Prune","on","Surrogate","all","MinL
 %     struct('AcquisitionFunctionName','expected-improvement-plus'))
 
 % classifier = fitcensemble(featureFlowers,label) maaaaaaaaaaaaaaaaaaaaaaan
-% classifier = fitcensemble(featureFlowers,label, 'Method', 'Bag') IM GONNA
-% CUM 85%
+% classifier = fitcensemble(featureFlowers,label, 'Method', 'Bag') IM GONNA CUM 85%
 % classifier = fitcensemble(featureFlowers,label, 'Method', 'LPBoost') 79%
-% classifier = fitcensemble(featureFlowers,label, 'Method', 'RUSBoost')
-% Buuuh 64%
-% classifier = fitcensemble(featureFlowers,label, 'Method', 'Subspace') 29%
-% classifier = fitcensemble(featureFlowers,label, 'Method', 'TotalBoost')
-% 75%
+% classifier = fitcensemble(featureFlowers,label, 'Method', 'RUSBoost') Buuuh 64%
+% classifier = fitcensemble(featureFlowers,label, 'Method', 'Subspace') Buuuuuuuuuuuuuh 29%
+% classifier = fitcensemble(featureFlowers,label, 'Method', 'TotalBoost') 75%
 
-% classifier =
-% fitcknn(featureFlowers,label,'NumNeighbors',5,'Standardize',1) 59%
+% classifier = fitcknn(featureFlowers,label,'NumNeighbors',1,'Standardize',1) 59%
 
 
 

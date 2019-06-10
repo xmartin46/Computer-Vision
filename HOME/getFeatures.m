@@ -3,7 +3,7 @@ function [features] = getFeatures(color, segmented)
     rgb = NormalitzaRGB(color);
     gris = rgb(:, :, 1)/3 + rgb(:, :, 2)/3 + rgb(:, :, 3)/3;
     norm = cat(3, gris, gris, gris);
-%     rgbNorm = double(color)./(double(norm) + 0.001);
+    rgbNorm = double(color)./(double(norm) + 0.001);
 
     % Histograma del color
 %     [hr hg hb] = histo3D(rgbNorm, segmented, 16);
@@ -11,7 +11,7 @@ function [features] = getFeatures(color, segmented)
 %     hg = imgaussfilt3(hg, 1.5);
 %     hb = imgaussfilt3(hb, 1.5);
 
-    [cluster_color, cluster_ratio, cluster_labels] = histo3D(color, segmented);
+    [cluster_color, cluster_ratio, ~] = histo3D(rgbNorm, segmented);
     cluster_color = reshape(cluster_color.', 1, []);
     ratios = cluster_ratio(2:end);
     ratios = ratios ./ sum(ratios(:));

@@ -45,9 +45,9 @@ for i =  (numBOTO*split + 1):numBOTO
     [color, segmented] = getImage(BOTODOR(floor(i)));
     featuresaux = getFeatures(color, segmented);
     prediction = predict(classifier, featuresaux);
-    labels = [labels;"Boto"];
-    predicted = [predicted; cell2mat(prediction(1))];
-    if cell2mat(prediction(1)) == "Boto"
+    labels = [labels;0];
+    predicted = [predicted; prediction(1)];
+    if prediction(1) == 0
        correctes = correctes + 1; 
        correctesT = correctesT + 1; 
     end
@@ -63,10 +63,10 @@ for i = (numCROCUS*split + 1):numCROCUS
     [color, segmented] = getImage(CROCUS(floor(i)));
     featuresaux = getFeatures(color, segmented);
     prediction = predict(classifier, featuresaux);
-    labels = [labels;"Crocus"];
-    predicted = [predicted; cell2mat(prediction(1))];
+    labels = [labels;1];
+    predicted = [predicted; prediction(1)];
 
-    if cell2mat(prediction(1)) == "Crocus"
+    if prediction(1) == 1
        correctes = correctes + 1; 
        correctesT = correctesT + 1; 
     end
@@ -82,9 +82,9 @@ for i = (numBUIXOL*split + 1):numBUIXOL
     [color, segmented] = getImage(BUIXOL(floor(i)));
     featuresaux = getFeatures(color, segmented);
     prediction = predict(classifier, featuresaux);
-    labels = [labels;"Buixol"];
-    predicted = [predicted; cell2mat(prediction(1))];
-    if cell2mat(prediction(1)) == "Buixol"
+    labels = [labels;2];
+    predicted = [predicted; prediction(1)];
+    if prediction(1) == 2
        correctes = correctes + 1; 
        correctesT = correctesT + 1; 
     end
@@ -100,10 +100,10 @@ for i = (numDENT*split + 1):numDENT
     [color, segmented] = getImage(DENTDELLEO(floor(i)));
     featuresaux = getFeatures(color, segmented);
     prediction = predict(classifier, featuresaux);
-    labels = [labels;"DentdeLleo"];
-    predicted = [predicted; cell2mat(prediction(1))];
+    labels = [labels;3];
+    predicted = [predicted; prediction(1)];
 
-    if cell2mat(prediction(1)) == "DentdeLleo"
+    if prediction(1) == 3
        correctes = correctes + 1; 
        correctesT = correctesT + 1; 
     end
@@ -120,10 +120,10 @@ for i = (numFADRINS*split + 1):numFADRINS
     [color, segmented] = getImage(FADRINS(floor(i)));
     featuresaux = getFeatures(color, segmented);
     prediction = predict(classifier, featuresaux);
-    labels = [labels;"Fadrins"];
-    predicted = [predicted; cell2mat(prediction(1))];
+    labels = [labels;4];
+    predicted = [predicted; prediction(1)];
 
-    if cell2mat(prediction(1)) == "Fadrins"
+    if prediction(1) == 4
        correctes = correctes + 1; 
        correctesT = correctesT + 1; 
     end
@@ -140,9 +140,9 @@ for i = (numFRITLLARIA*split + 1):numFRITLLARIA
     [color, segmented] = getImage(FRITILLARIA(floor(i)));
     featuresaux = getFeatures(color, segmented);
     prediction = predict(classifier, featuresaux);
-    labels = [labels;"Fritillaria"];
-    predicted = [predicted; cell2mat(prediction(1))];
-    if cell2mat(prediction(1)) == "Fritillaria"
+    labels = [labels;5];
+    predicted = [predicted; prediction(1)];
+    if prediction(1) == 5
        correctes = correctes + 1; 
        correctesT = correctesT + 1; 
     end
@@ -158,10 +158,10 @@ for i = (numGERBERA*split + 1):numGERBERA
     [color, segmented] = getImage(GERBERA(floor(i)));
     featuresaux = getFeatures(color, segmented);
     prediction = predict(classifier, featuresaux);
-    labels = [labels;"Gerbera"];
-    predicted = [predicted; cell2mat(prediction(1))];
+    labels = [labels;6];
+    predicted = [predicted; prediction(1)];
 
-    if cell2mat(prediction(1)) == "Gerbera"
+    if prediction(1) == 6
        correctes = correctes + 1; 
        correctesT = correctesT + 1; 
     end
@@ -177,10 +177,10 @@ for i = (numGIRASOL*split + 1):numGIRASOL
     [color, segmented] = getImage(GIRASOL(floor(i)));
     featuresaux = getFeatures(color, segmented);
     prediction = predict(classifier, featuresaux);
-    labels = [labels;"Girasol"];
-    predicted = [predicted; cell2mat(prediction(1))];
+    labels = [labels;7];
+    predicted = [predicted; prediction(1)];
 
-    if cell2mat(prediction(1)) == "Girasol"
+    if prediction(1) == 7
        correctes = correctes + 1; 
        correctesT = correctesT + 1; 
     end
@@ -197,10 +197,10 @@ for i = (numHEMEROCALLIS*split + 1):numHEMEROCALLIS
     [color, segmented] = getImage(HEMEROCALLIS(floor(i)));
     featuresaux = getFeatures(color, segmented);
     prediction = predict(classifier, featuresaux);
-    labels = [labels;"Hemerocallis"];
-    predicted = [predicted; cell2mat(prediction(1))];
+    labels = [labels;8];
+    predicted = [predicted; prediction(1)];
 
-    if cell2mat(prediction(1)) == "Hemerocallis"
+    if prediction(1) == 8
        correctes = correctes + 1; 
        correctesT = correctesT + 1; 
     end
@@ -217,10 +217,10 @@ for i = (numLLIRI*split + 1):numLLIRI
     [color, segmented] = getImage(LLIRI(floor(i)));
     featuresaux = getFeatures(color, segmented);
     prediction = predict(classifier, featuresaux);
-    labels = [labels;"Lliri"];
-    predicted = [predicted; cell2mat(prediction(1))];
+    labels = [labels;9];
+    predicted = [predicted; prediction(1)];
 
-    if cell2mat(prediction(1)) == "Lliri"
+    if prediction(1) == 9
        correctes = correctes + 1; 
        correctesT = correctesT + 1; 
     end
@@ -237,10 +237,10 @@ for i = (numNARCIS*split + 1):numNARCIS
     [color, segmented] = getImage(NARCIS(floor(i)));
     featuresaux = getFeatures(color, segmented);
     prediction = predict(classifier, featuresaux);
-    labels = [labels;"Narcis"];
-    predicted = [predicted; cell2mat(prediction(1))];
+    labels = [labels;10];
+    predicted = [predicted; prediction(1)];
 
-    if cell2mat(prediction(1)) == "Narcis"
+    if prediction(1) == 10
        correctes = correctes + 1; 
        correctesT = correctesT + 1; 
     end
@@ -257,10 +257,10 @@ for i = (numVIOLA*split + 1):numVIOLA
     [color, segmented] = getImage(VIOLA(floor(i)));
     featuresaux = getFeatures(color, segmented);
     prediction = predict(classifier, featuresaux);
-    labels = [labels;"Viola"];
-    predicted = [predicted; cell2mat(prediction(1))];
+    labels = [labels;11];
+    predicted = [predicted; prediction(1)];
 
-    if cell2mat(prediction(1)) == "Viola"
+    if prediction(1) == 11
        correctes = correctes + 1; 
        correctesT = correctesT + 1; 
     end

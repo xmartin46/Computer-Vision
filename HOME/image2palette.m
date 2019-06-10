@@ -27,7 +27,7 @@ if plotOption
     if ~resizeOption, title(['Source image'])
     else title(['Source image (resized, ' num2str(sz(1)) 'x' num2str(sz(2)) ')']); end
     set(gca, 'LineWidth', 2, 'Box', 'off', 'FontSize', fontsize);
-    xlabel('Hi'); set(gca, 'XTick', []);
+    xlabel('image\_1291'); set(gca, 'XTick', []);
 end
 %% (3) Parse and visualize LAB values
 img_parse = [];
@@ -43,7 +43,7 @@ for clusterIdx = 1:nCluster
     p(clusterIdx) = 100*length(find(G==clusterIdx)) / length(G);
 end
 [~,order]=sortrows(p'); order=order(end:-1:1);
-% disp(['K-means clustering for image [ Hi ]'])
+% disp(['K-means clustering for image [ image_1291 ]'])
 % Variables to return
 cluster_color = []; 
 cluster_ratio = [];
