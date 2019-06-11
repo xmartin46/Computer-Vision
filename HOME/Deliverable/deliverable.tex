@@ -313,6 +313,45 @@ Finally, we did realize that it was nearly impossible to get a perfect segmentat
     \caption{Segmentation using active contour method}
 \end{figure}
 
+\subsection{Significance of our features}
+We have already introduced the features why are using, however it is important to see which are most important and how they are actually able to distinct different types of flowers. To do so we have used the \textbf{predictorImportance} utility from Matlab which computes the importance of each predictor based on the splits, and the number of branch nodes; and the \textbf{Classification Learner App} which is able to gives us the relationship between two features and plot the classes.
+
+
+\begin{figure}[H]
+    \centering
+  \includegraphics[scale=0.25]{images/importance.jpg}
+    \label{segmentation4}
+    \caption{Significance of our features}
+\end{figure}
+
+As we can see in the bar plot, we can see the estimates of significance of each feature. Although it was expected, we have confirmed that our most valuable features are the color and the number of petals since those features vary a lot depending on each type of flower. 
+\medskip
+
+Also, we were a bit surprised about the tiny significance of the fourier descriptor or the relative positions of the centroids in our classifier. To confirm it we used the Classification Learner to see some of its relationships between other features. Using those features we did not find any combination that gave us a good classification distribution. Here we can see some examples: 
+
+\begin{figure}[H]
+    \begin{subfigure}[t]{0.45\textwidth}
+    \centering
+  \includegraphics[scale=0.25]{images/fourierHOGG.jpg}
+    \caption{HOGG-Fourier Relationship}
+    \end{subfigure}
+    \begin{subfigure}[t]{0.45\textwidth}
+    \centering
+    \includegraphics[scale=0.34]{images/centroidXcentroidY.png}
+    \caption{CentroidXCentroidY Relationship}
+    \end{subfigure}
+\end{figure}
+
+That is why we conclude that those features are as good as the others to classify. If they were good, we should have found some distribution looking like this: 
+
+\begin{figure}[H]
+    \centering
+  \includegraphics[scale=0.22]{images/colors.jpg}
+    \caption{Colors relationship}
+\end{figure}
+
+
+
 
 \section{The \textit{zero} class}
 
