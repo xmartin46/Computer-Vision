@@ -275,13 +275,13 @@ To do so we tried several methods because segmentation can be really difficult d
 \begin{figure}[H]
     \begin{subfigure}[t]{0.45\textwidth}
     \centering
-  \includegraphics[scale=0.13]{images/segmentation0.jpg}
-    \caption{Segmentation using Otsu}
+  \includegraphics[scale=0.25]{images/segmentation0.jpg}
+    \caption{Original}
     \label{segmentation0}
     \end{subfigure}
     \begin{subfigure}[t]{0.45\textwidth}
     \centering
-    \includegraphics[scale=0.35]{images/segmentation1.jpg}
+    \includegraphics[scale=0.25]{images/segmentation1.jpg}
     \caption{Segmentation using k-means}
     \label{segmentation1}
     \end{subfigure}
@@ -290,33 +290,27 @@ To do so we tried several methods because segmentation can be really difficult d
 \begin{figure}[H]
     \begin{subfigure}[t]{0.45\textwidth}
     \centering
-  \includegraphics[scale=0.20]{images/segmentation2.jpg}
-    \caption{Segmentation using }
-    \label{Segmentation using }
+  \includegraphics[scale=0.25]{images/segmentation2.jpg}
+    \caption{Segmentation using Fast Marching}
+    \label{segmentation2}
     \end{subfigure}
     \begin{subfigure}[t]{0.45\textwidth}
     \centering
-    \includegraphics[scale=0.20]{images/segmentation3.jpg}
-    \caption{Segmentation using }
+    \includegraphics[scale=0.25]{images/segmentation3.jpg}
+    \caption{Segmentation using Otsu}
     \label{segmentation3}
     \end{subfigure}
     \label{segmentationALL}
-    \caption{Examples of bad segmentations with different methods}
+    \caption{Examples of bad segmentation with different methods}
 \end{figure}
 
-Finally, we did realize that it was nearly impossible to get a perfect segmentation method, it really depends on the image; so we decided to use the \textbf{active contour} method which seems to get us the bests results. This method segments an image into foreground and background using the active contour algorithm, also called \textit{snakes}. During an interative process, those \textit{snakes} move to find object boundaries.
+Finally, we did realize that it was nearly impossible to get a perfect segmentation method, it really depends on the image; so we decided to use the \textbf{active contour} method which seems to get us the better results on average. This method segments an image into foreground and background using the active contour algorithm, also called \textit{snakes}. During an interative process, those \textit{snakes} move to find object boundaries.
 
 \begin{figure}[H]
-    \begin{subfigure}[t]{0.45\textwidth}
     \centering
-  \includegraphics[scale=0.20]{images/segmentation4.jpg}
-    \end{subfigure}
-    \begin{subfigure}[t]{0.45\textwidth}
-    \centering
-    \includegraphics[scale=0.20]{images/segmentation3.jpg}
-    \end{subfigure}
+  \includegraphics[scale=0.30]{images/segmentation4.jpg}
     \label{segmentation4}
-    \caption{Examples of segmentations with active contour method}
+    \caption{Segmentation using active contour method}
 \end{figure}
 
 
