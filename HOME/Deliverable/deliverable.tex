@@ -267,12 +267,65 @@ We have trained all the classifiers with the training set and we have selected t
 
 \subsection{Segmentation}
 
+Some of the pictures that were given did not have a proper segmentation. Moreover, if we wanted to use different pictures from another sources, we needed a nice and automated way to segmented them since most of our descriptors use the segmentation.\\
+\medskip
+
+To do so we tried several methods because segmentation can be really difficult depending on the image. Some of the methods we tried were \textbf{Otsu}, \textbf{k-means with 3 or 4 clusters}, \textbf{superpixels and region growing} or \textbf{fast marching}. We also considered another type of algorithms called \textbf{graph-based segmentation} but they are not easy to automate so we discarted them. In the following examples, you can see some of the bad segmentations those methods gave us:
+
+\begin{figure}[H]
+    \begin{subfigure}[t]{0.45\textwidth}
+    \centering
+  \includegraphics[scale=0.13]{images/segmentation0.jpg}
+    \caption{Segmentation using Otsu}
+    \label{segmentation0}
+    \end{subfigure}
+    \begin{subfigure}[t]{0.45\textwidth}
+    \centering
+    \includegraphics[scale=0.35]{images/segmentation1.jpg}
+    \caption{Segmentation using k-means}
+    \label{segmentation1}
+    \end{subfigure}
+\end{figure}
+
+\begin{figure}[H]
+    \begin{subfigure}[t]{0.45\textwidth}
+    \centering
+  \includegraphics[scale=0.20]{images/segmentation2.jpg}
+    \caption{Segmentation using }
+    \label{Segmentation using }
+    \end{subfigure}
+    \begin{subfigure}[t]{0.45\textwidth}
+    \centering
+    \includegraphics[scale=0.20]{images/segmentation3.jpg}
+    \caption{Segmentation using }
+    \label{segmentation3}
+    \end{subfigure}
+    \label{segmentationALL}
+    \caption{Examples of bad segmentations with different methods}
+\end{figure}
+
+Finally, we did realize that it was nearly impossible to get a perfect segmentation method, it really depends on the image; so we decided to use the \textbf{active contour} method which seems to get us the bests results. This method segments an image into foreground and background using the active contour algorithm, also called \textit{snakes}. During an interative process, those \textit{snakes} move to find object boundaries.
+
+\begin{figure}[H]
+    \begin{subfigure}[t]{0.45\textwidth}
+    \centering
+  \includegraphics[scale=0.20]{images/segmentation4.jpg}
+    \end{subfigure}
+    \begin{subfigure}[t]{0.45\textwidth}
+    \centering
+    \includegraphics[scale=0.20]{images/segmentation3.jpg}
+    \end{subfigure}
+    \label{segmentation4}
+    \caption{Examples of segmentations with active contour method}
+\end{figure}
+
+
 \section{The \textit{zero} class}
 
 In order to increase the precision of our model, we have added a new class called \textit{zero}. This class represents all the flowers that are not from any of the 12 species that we are observing.
 \medskip
 
-To implement it we have written a script that \textbf{crawls google images and downloads photos of other species of flowers}. This will be very useful to create our dataset of \textit{zero} flowers. Morover, since these images are not segmented, we have looked for another source of flower pictures. In this case we have used \textbf{the Flowers Dataset from the Visual Geometry Group} (University of Oxford). This approach will help us to save time because we will have some flowers segmented by us (reviewed manually afterwards) and some already segmented (which we suppose are already correct).
+To implement it we have written a script that \textbf{crawls google images and downloads photos of other species of flowers}. This will be very useful to create our dataset of \textit{zero} flowers. Morover, since these images are not segmented, we have looked for another source of flower pictures. In this case we have used \textbf{the Flowers Dataset from the Visual Geometry Group} (University of Oxford)\cite{Flower dataset}. This approach will help us to save time because we will have some flowers segmented by us (reviewed manually afterwards) and some already segmented (which we suppose are already correct).
 \medskip
 
 Our approach will consists in not training our classifier with that photos: we will assign a picture to that class if the confidence is less than a threshold. To test if actually works we will use the already mentioned test. 
@@ -312,7 +365,7 @@ Some of the flowers that can be seen in our \textit{zero} flower dataset are:
 
 
 \section{Data augmentation}
-In order \textbf{to strenghten our descriptors} we have also used the following public repository:  \textit{Albumentation: fast image augmentation library and easy to use wrapper around other libraries}(see more in References), which proporcionates facilities to augment the dataset including several transformations like: flipping, blurring, RGB Shifting, Random contrast, Random brightness, etc...
+In order \textbf{to strenghten our descriptors} we have also used the following public repository:  \textit{Albumentation: fast image augmentation library and easy to use wrapper around other libraries} \cite{Albumentations}, which proporcionates facilities to augment the dataset including several transformations like: flipping, blurring, RGB Shifting, Random contrast, Random brightness, etc...
 \medskip
 
 To decide which transformations we wanted to apply, we looked first to our descriptors and the importance of each feature. For example, we discarted the Channel Shuffle because we believe that the color is very important for our implementation. Then, based on trial and error, we picked some of them which gave us an overall better result. Finally we are using random variations of:
@@ -376,7 +429,8 @@ The best results have been the KNN Cubic and fitcensemble BAG classifiers, with 
 \item \textbf{getForma}: function that gets the shape Fourier descriptor. 
 \item \textbf{getHog}: function that gets the HOG features. It uses the \textbf{Matlab Computer Vision Toolbox} utility \textbf{extractHOGFeatures}.
 \item \textbf{getNumberPetals}: function that gets the number of petals using the skeleton. It uses the matlab utility \textbf{bwmorph} for the skeletonization. 
-
+\item \textbf{getImage}: function that gets us the image and its segmentation.
+\item \textbf{segment}: function that segments an image using the active countour method. It uses the matlab utility \textbf{activecontour}.
 \item \textbf{image2palette}\cite{image2palette}: Function extracted from Matlab File Exchange. It parses the image into pixels in L*a*b space, and returns the major components clustered by k-means method. The L*a*b color space (defined by the International Commission on Illumination) expresses color as three values: L* for the lightness from black (0) to white (100), a* from green (-) to red (+), and b* from blue (-) to yellow (+). It was designed so that the same amout of numerical change in the values corresponds to the same amount of visually perceived change. We use it to get the 3 main colors of the image and the percentage of pixels in each cluster.
 
 %\item \textbf{histo3d}: function that gets the color information.
