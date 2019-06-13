@@ -6,6 +6,8 @@ Authors: Xavier Martin Ballesteros and Adrià Cabeza Sant'Anna
 [![GitHub stars](https://img.shields.io/github/stars/xmartin46/VC/VC.svg)](https://GitHub.com/xmartin46/VC/stargazers/)
 [![GitHub repo size in bytes](https://img.shields.io/github/repo-size/xmartin46/VC/VC.svg)](https://github.com/xmartin46/VC)
 
+[![ForTheBadge built-with-love](http://ForTheBadge.com/images/badges/built-with-love.svg)](https://GitHub.com/Naereen/)
+
 
 Per quan estigui public:
 
@@ -19,7 +21,7 @@ Mark 10/10
 - [Flowers detection]()
 
 ## Laboratories 
-Mark:9.5/10
+Mark 9.5/10
 - [Introduction to Matlab](https://github.com/xmartin46/VC/blob/master/S1/Practica_0/Practica0.pdf)
 - [Introduction](https://github.com/xmartin46/VC/blob/master/S1/Sessio1.pdf)
 - [Pixel operations](https://github.com/xmartin46/VC/blob/master/S2/Sessio2.pdf)
