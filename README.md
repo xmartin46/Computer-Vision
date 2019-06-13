@@ -9,7 +9,7 @@ Authors: Xavier Martin Ballesteros and Adrià Cabeza Sant'Anna
 
 Per quan estigui public:
 
-> Ficaré alguna foto de cada projecte tho
+> Ficaré alguna foto de cada projecte tho, quan puguis penja-ho, fica-li una descripció i afegeix que sta fet com a tags matlab, vc i python
 
 ## First project: Detect the percentage of fat in chops images using binarization 
 Mark 10/10
