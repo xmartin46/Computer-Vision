@@ -18,7 +18,7 @@ Mark 10/10
 - [Meat Control Quality](https://github.com/xmartin46/VC/blob/master/Practica1/Deliverable/deliverable.pdf)
 
 ## Second project: Detect types of flowers using features extraction
-Mark 10.38/10
+Mark 11/11
 - [Flowers detection]()
 
 ## Laboratories 
