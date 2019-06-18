@@ -35,7 +35,7 @@ Mark 9.5/10
 - [Classifiers](https://github.com/xmartin46/VC/blob/master/S9/Sessio9.pdf)
 - [Color features using histograms](https://github.com/xmartin46/VC/blob/master/S10/Sessio10.pdf)
 - [Hough and Harris descriptors](https://github.com/xmartin46/VC/blob/master/S11/Sessio11.pdf)
-
+- [Classification of numbers 0 and 1](https://github.com/xmartin46/VC/blob/master/S12/Sessio12_classificacio_0_i_1.pdf)
 
 
 
