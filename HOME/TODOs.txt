@@ -1,8 +1,0 @@
-IMPORTANT: Codi més bonic
-Eliminar fotos que no tenen png? Peruquè sino contribueixen algunes al 80% del training => Solució: enlloc d'agafar els jpg agafar directament els png
-
-Fill a getForma arreglar
-
-Fourier vull més valors i no puc :(
-
-Contorns de les imatges segmented == 1

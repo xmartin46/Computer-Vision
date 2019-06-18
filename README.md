@@ -19,7 +19,7 @@ Mark 10/10
 
 ## Second project: Detect types of flowers using features extraction
 Mark 11/11
-- [Flowers detection]()
+- [Flowers detection](https://github.com/xmartin46/VC/blob/master/Practica2/Deliverable/deliverable.pdf)
 
 ## Laboratories 
 Mark 9.5/10
