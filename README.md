@@ -1,10 +1,11 @@
 # Computer Vision - FIB
 
 [![HitCount](http://hits.dwyl.io/VC/VC.svg)](http://hits.dwyl.io/xmartin46/VC)
-[![GitHub stars](https://img.shields.io/github/stars/xmartin46/VC/VC.svg)](https://GitHub.com/xmartin46/VC/stargazers/)
-[![GitHub repo size in bytes](https://img.shields.io/github/repo-size/xmartin46/VC/VC.svg)](https://github.com/xmartin46/VC)
+[![GitHub stars](https://img.shields.io/github/stars/xmartin46/Computer-Vision.svg)](https://GitHub.com/xmartin46/VC/stargazers/)
+[![GitHub repo size in bytes](https://img.shields.io/github/repo-size/xmartin46/Computer-Vision.svg?color=yellow)](https://github.com/xmartin46/Computer-Vision)
 
-[![ForTheBadge built-with-love](http://ForTheBadge.com/images/badges/built-with-love.svg)](https://GitHub.com/Naereen/)
+
+[![ForTheBadge built-with-love](http://ForTheBadge.com/images/badges/built-with-love.svg)](https://github.com/xmartin46/Computer-Vision)
 
 Computer vision is a field that focuses on how computers can gain high-level understanding from digital images or videos. It is amazing that humans and animals can reconstruct very easily objects' properties such as shape, illumination and color while computer vision algorithms are so error prone. Things like the illumination, scale and rotation of images make that computer vision systems see one thing or another completely different, even though humans know that it is the same object or place.
 
@@ -19,6 +20,7 @@ Mark 10/10
 ## Second project: Detect types of flowers using features extraction
 Mark 11/11
 - [Flowers detection](https://github.com/xmartin46/VC/blob/master/Practica2/Deliverable/deliverable.pdf)
+
 
 ## Laboratories 
 Mark 9.5/10
