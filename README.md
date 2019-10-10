@@ -21,11 +21,7 @@ The aim of was assignment is to detect the percentage of fat in the images with 
 
 We have first computed a mask that only selects the chop pixels. To do it, we have used Otsu thresholding method. Once we have got the part of the image we wanted, we have used several  techniques to calculate the threshold. Binarize the image with this threshold leaves in blank the fat pixels, which is what we wanted. Then, dividing the pixels of fat by the chop pixels, we got the percentage of fat in a specific chop. Moreover, we have also computed manually both thresholds (chop and fat) using the histogram obtained.
 
-The methods consists in setting a constant value called *threshold* (T) and split up the pixels depending on its value (f(i,j)):
-$$
-g(i,j)=1\ if\ f(i,j) \geq T \\
-g(i,j)=0\ if\ f(i,j) \leq T
-$$
+The methods consists in setting a constant value called *threshold* (T) and split up the pixels depending on its value (f(i,j)): **g(i,j)=1 if f(i,j) >= T** and **g(i,j)=0 if f(i,j) <= T**
 
 
 ## Second project: Detect types of flowers using features extraction
@@ -34,18 +30,13 @@ Mark 11/11
 - [Flowers detection](https://github.com/xmartin46/VC/blob/master/Practica2/Deliverable/deliverable.pdf)
 
 The aim of this assignment was to classify 12 different types of flowers using feature extraction. The different flower types are the following:
-- BotodOr 
-- Crocus  
-- Fadrins   
-- Gerbera 
-- Hemerocallis 
-- Narcis
-- Buixol
-- DentdeLleo 
-- Fritillaria  
-- Girasol 
-- Lliri     
-- Viola
+
+|             |              |             |
+|-------------|--------------|-------------|
+| Botó d'Or   | Crocus       | Fadrins     |
+| Gerbera     | Hemerocallis | Narcís      |
+| Buixol      | Dent de Lleó | Fritillaria |
+| Girasol     | Lliri        | Viola       |
 
 ## Laboratories 
 Mark 9.5/10
